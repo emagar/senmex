@@ -5,7 +5,7 @@ ord,edo,nom,patmat,birth,fm,part,postulo,eleccion,dsup,in1,out1,in2,out2,in3,out
 4,ags,JUAN FRANCISCO,LARIOS ESPARZA,,m,pan,pan-prd-mc,mayoria relativa,1,,,,,,,,0,out-p-,,
 5,ags,DANIEL,GUTIERREZ CASTORENA,1954,m,morena,morena-pt-pes,primera minoria,0,20180829,,,,,,,1,reran-,,
 6,ags,ALEJANDRO,PONCE LARRINUA,,m,morena,morena-pt-pes,primera minoria,1,,,,,,,,0,out-p-,,
-7,bc,JAIME,BONILLA VALDEZ,1950,m,pt,morena-pt-pes,mayoria relativa,0,20180829,20181206,,,,,,1,reran-,62-sen,gano gubernatura
+7,bc,JAIME,BONILLA VALDEZ,1950,m,pt,morena-pt-pes,mayoria relativa,0,20180829,20181206,,,,,,1,reran-beaten,62-sen,gano gubernatura
 8,bc,GERARDO,NOVELO OSUNA,1972,m,morena,morena-pt-pes,mayoria relativa,1,20181206,,,,,,,0,out-p-,,
 9,bc,ALEJANDRA DEL CARMEN,LEON GASTELUM,1976,f,mc,morena-pt-pes,mayoria relativa,0,20180829,20210307,20210325,,,,,0,out-p-,,morena > pt 9jul2020 pt > gpoPlural 15oct2021 gpoPlural > mc 21sep2022
 10,bc,CLAUDIA,HERRERA RODRIGUEZ,,f,pes,morena-pt-pes,mayoria relativa,1,20210309,20210325,,,,,,0,out-p-,,
@@ -17,7 +17,7 @@ ord,edo,nom,patmat,birth,fm,part,postulo,eleccion,dsup,in1,out1,in2,out2,in3,out
 16,bcs,MONICA,TREVIZO VASQUEZ,,f,morena,morena-pt-pes,mayoria relativa,1,,,,,,,,0,out-p-,,
 17,bcs,MARIA GUADALUPE,SALDAÑA CISNEROS,1972,f,pan,pan-prd-mc,primera minoria,0,20180829,,,,,,,0,out-p-,,
 18,bcs,AUDELIA ESTHELA,VILLARREAL ZAVALA,,f,pan,pan-prd-mc,primera minoria,1,,,,,,,,0,out-p-,,
-19,cam,ANIBAL,OSTOA ORTEGA,1949,m,morena,morena-pt-pes,mayoria relativa,0,20180829,,,,,,,1,reran-,,
+19,cam,ANIBAL,OSTOA ORTEGA,1949,m,morena,morena-pt-pes,mayoria relativa,0,20180829,,,,,,,1,Reelected,,
 20,cam,ARTURO DEL CARMEN,MOO CAHUICH,,m,morena,morena-pt-pes,mayoria relativa,1,,,,,,,,0,out-p-,,
 21,cam,CECILIA MARGARITA,SANCHEZ GARCIA,1959,f,pri,morena-pt-pes,mayoria relativa,0,20180829,,,,,,,0,out-p-,,switcher morena > pri 25oct2023
 22,cam,LIDA,RUIZ HERNANDEZ,,f,morena,morena-pt-pes,mayoria relativa,1,,,,,,,,0,out-p-,,
@@ -77,7 +77,7 @@ ord,edo,nom,patmat,birth,fm,part,postulo,eleccion,dsup,in1,out1,in2,out2,in3,out
 76,hgo,NAVOR ALBERTO,ROJAS MANCERA,,m,morena,morena,mayoria relativa,1,,,,,,,,0,out-p-,,
 77,hgo,NUVIA MAGDALENA,MAYORGA DELGADO,1966,f,pvem,pri-pvem-panal,primera minoria,0,20180829,,,,,,,0,out-p-,,turncoat pri > pvem
 78,hgo,NORA LILIANA,OROPEZA OLGUIN,,f,pri,pri-pvem-panal,primera minoria,1,,,,,,,,0,out-p-,,
-79,jal,JOSE CLEMENTE,CASTAÑEDA HOEFLICH,1972,m,mc,pan-prd-mc,mayoria relativa,0,20180829,20200901,,,,,,1,reran-,,reran pr
+79,jal,JOSE CLEMENTE,CASTAÑEDA HOEFLICH,1972,m,mc,pan-prd-mc,mayoria relativa,0,20180829,20200901,,,,,,1,Reelected,,reran pr
 80,jal,JOSE ALBERTO,GALARZA VILLASEÑOR,,m,mc,pan-prd-mc,mayoria relativa,1,20200902,,,,,,,0,out-p-,,
 81,jal,VERONICA,DELGADILLO GARCIA,1982,f,mc,pan-prd-mc,mayoria relativa,0,20180829,20210311,20210611,,,,,0,out-p-,63-sen,
 82,jal,RUTH ALEJANDRA,LOPEZ HERNANDEZ,,f,mc,pan-prd-mc,mayoria relativa,1,20210311,20210611,,,,,,0,out-p-,,
@@ -115,7 +115,7 @@ ord,edo,nom,patmat,birth,fm,part,postulo,eleccion,dsup,in1,out1,in2,out2,in3,out
 114,nl,MARCELA,LUQUE RANGEL,,f,mc,mc,mayoria relativa,1,,,,,,,,0,out-p-,,
 115,nl,VICTOR OSWALDO,FUENTES SOLIS,1975,m,pan,pan  ,primera minoria,0,20180829,,,,,,,0,out-p-,,
 116,nl,JESUS HORACIO,GONZALEZ DELGADILLO,,m,pan,pan  ,primera minoria,1,,,,,,,,0,out-p-,,
-117,oax,SUSANA,HARP ITURRIBARRIA ,1968,f,morena,morena-pt-pes,mayoria relativa,0,20180829,,,,,,,1,reran-,,reran pr
+117,oax,SUSANA,HARP ITURRIBARRIA ,1968,f,morena,morena-pt-pes,mayoria relativa,0,20180829,,,,,,,1,Reelected,,reran pr
 118,oax,CONCEPCION,RUEDA GOMEZ,,f,morena,morena-pt-pes,mayoria relativa,1,,,,,,,,0,out-p-,,
 119,oax,SALOMON,JARA CRUZ,1959,m,morena,morena-pt-pes,mayoria relativa,0,20180829,,,,,,,0,out-p-,,
 120,oax,ADOLFO,GOMEZ HERNANDEZ,,m,morena,morena-pt-pes,mayoria relativa,1,,,,,,,,0,out-p-,,
@@ -151,13 +151,13 @@ ord,edo,nom,patmat,birth,fm,part,postulo,eleccion,dsup,in1,out1,in2,out2,in3,out
 150,sin,ELIZABETH,AVILA CARRANCIO,,f,morena,morena-pt-pes,mayoria relativa,1,,,,,,,,0,out-p-,,
 151,sin,MARIO,ZAMORA GASTELUM ,1974,m,pri,pri-pvem-panal,primera minoria,0,20180829,20210305,20210615,,,,,0,out-p-,,
 152,sin,HERIBERTO MANUEL,GALINDO QUIÑONES,1951,m,pri,pri-pvem-panal,primera minoria,1,20210309,20210615,,,,,,0,out-p-,,
-153,son,MARIA LILLY DEL CARMEN,TELLEZ GARCIA,1967,f,pan,morena-pt-pes,mayoria relativa,0,20180829,,,,,,,1,reran-,,reran pr
+153,son,MARIA LILLY DEL CARMEN,TELLEZ GARCIA,1967,f,pan,morena-pt-pes,mayoria relativa,0,20180829,,,,,,,1,Reelected,,reran pr
 154,son,REINA,CASTRO LONGORIA ,,f,morena,morena-pt-pes,mayoria relativa,1,,,,,,,,0,out-p-,,
 155,son,FRANCISCO ALFONSO,DURAZO MONTAÑO,1954,m,morena,morena-pt-pes,mayoria relativa,0,20180829,20181108,,,,,,0,out-p-,,
 156,son,ARTURO,BOURS GRIFFITH,1955,m,morena,morena-pt-pes,mayoria relativa,1,20181108,,,,,,,0,out-p-,,
 157,son,SYLVANA,BELTRONES SANCHEZ,1982,f,pri,pri-pvem-panal,primera minoria,0,20180829,,,,,,,0,out-p-,,
 158,son,LUZ MIREYA,FRANCO HERNANDEZ,,f,pri,pri-pvem-panal,primera minoria,1,,,,,,,,0,out-p-,,
-159,tab,MONICA,FERNANDEZ BALBOA ,1966,f,morena,morena-pt-pes,mayoria relativa,0,20180829,,,,,,,0,out-p-,,
+159,tab,MONICA,FERNANDEZ BALBOA ,1966,f,morena,morena-pt-pes,mayoria relativa,0,20180829,,,,,,,0,Reelected,,
 160,tab,ADRIANA,MANZANILLA FOJACO,,f,morena,morena-pt-pes,mayoria relativa,1,,,,,,,,0,out-p-,,
 161,tab,JAVIER,MAY RODRIGUEZ ,1966,m,morena,morena-pt-pes,mayoria relativa,0,20180829,20181129,,,,,,0,out-p-,,
 162,tab,OVIDIO SALVADOR,PERALTA SUAREZ,1982,m,morena,morena-pt-pes,mayoria relativa,1,20181204,,,,,,,0,out-p-,,
@@ -207,7 +207,7 @@ ord,edo,nom,patmat,birth,fm,part,postulo,eleccion,dsup,in1,out1,in2,out2,in3,out
 206,--,ROBERTO JUAN,MOYA CLEMENTE,1967,m,pan,pan,representacion proporcional,1,20190102,,,,,,,0,out-p-,,
 207,--,CLAUDIA,RUIZ MASSIEU SALINAS,1972,f,indep,pri  ,representacion proporcional,0,20180829,20190515,20190816,,,,,0,out-p-,59-61,turncoat pri > indep 6oct2023 | mc renom but not listed ine veto?
 208,--,MERCEDES DEL CARMEN,GUILLEN VICENTE,1954,f,pri,pri  ,representacion proporcional,1,20190516,20190816,,,,,,0,out-p-,,
-209,--,CARLOS HUMBERTO,ACEVES DEL OLMO ,1940,m,pri,pri,representacion proporcional,0,20180829,,,,,,,1,reran-,,reran pr
+209,--,CARLOS HUMBERTO,ACEVES DEL OLMO ,1940,m,pri,pri,representacion proporcional,0,20180829,,,,,,,1,reran-beaten,,reran pr
 210,--,JOSE EDUARDO,CALZADA ROVIROSA,,m,pri,pri,representacion proporcional,1,,,,,,,,0,out-p-,,
 211,--,VANESSA,RUBIO MARQUEZ ,1972,f,pri,pri,representacion proporcional,0,20180829,20200716,,,,,,0,out-p-,,licencia cuando extraditaron a Emilio Lozoya
 212,--,NANCY GUADALUPE,SANCHEZ ARREDONDO,1965,f,morena,pri,representacion proporcional,1,20200717,,,,,,,0,out-p-,,
@@ -223,7 +223,7 @@ ord,edo,nom,patmat,birth,fm,part,postulo,eleccion,dsup,in1,out1,in2,out2,in3,out
 224,--,DANIELA,GARCIA TREVIÑO,,f,pvem,pvem,representacion proporcional,1,,,,,,,,0,out-p-,,
 225,--,--,--,,m,pvem,,representacion proporcional,0,,,,,,,,0,out-p-,,
 226,--,ROGELIO ISRAEL,ZAMORA GUZMAN,,m,pvem,,representacion proporcional,1,20180829,,,,,,,0,out-p-,,
-227,--,GEOVANNA DEL CARMEN,BAÑUELOS DE LA TORRE,1980,f,pt,,representacion proporcional,0,20180829,,,,,,,1,reran-,,reran pr
+227,--,GEOVANNA DEL CARMEN,BAÑUELOS DE LA TORRE,1980,f,pt,,representacion proporcional,0,20180829,,,,,,,1,Reelected,,reran pr
 228,--,MARIA DE JESUS,HERNANDEZ NIÑO,,f,pt,,representacion proporcional,1,,,,,,,,0,out-p-,,
 229,--,DORA PATRICIA,MERCADO CASTRO,1957,f,mc,mc,representacion proporcional,0,20180829,,,,,,,0,out-p-,,
 230,--,JESSICA MARIA GUADALUPE,ORTEGA DE LA CRUZ,,f,mc,mc,representacion proporcional,1,,,,,,,,0,out-p-,,
@@ -249,11 +249,11 @@ ord,edo,nom,patmat,birth,fm,part,postulo,eleccion,dsup,in1,out1,in2,out2,in3,out
 250,--,--,--,,f,pes,morena,representacion proporcional,1,,,,,,,,0,out-p-,,
 251,--,EUNICE RENATA,ROMO MOLINA,,f,pes,morena,representacion proporcional,0,20180829,,,,,,,0,out-p-,,Solo aparece como suplente en la lista del INE
 252,--,--,--,,f,pes,morena,representacion proporcional,1,,,,,,,,0,out-p-,,
-253,--,GABRIEL GARCIA,HERNANDEZ,1977,m,morena,morena,representacion proporcional,0,20180829,20181129,20210701,,,,,0,out-p-,,
+253,--,GABRIEL,GARCIA HERNANDEZ,1977,m,morena,morena,representacion proporcional,0,20180829,20181129,20210701,,,,,0,out-p-,,
 254,--,JOSE ALEJANDRO,PEÑA VILLA,,m,morena,morena,representacion proporcional,1,20181129,20210701,,,,,,0,out-p-,,
 255,--,CASIMIRO,MENDEZ ORTIZ ,1977,m,morena,morena,representacion proporcional,0,20180829,,,,,,,0,out-p-,,
 256,--,ROBERTO,PANTOJA ARZOLA,,m,morena,morena,representacion proporcional,1,,,,,,,,0,out-p-,,
 257,--,CLAUDIA ESTHER,BALDERAS ESPINOZA ,1991,f,pri,morena,representacion proporcional,0,20180829,,,,,,,0,out-p-,,morena > pri 11dic2023
 258,--,TANYA CAROLA,VIVEROS CHAZARO,,f,morena,morena,representacion proporcional,1,,,,,,,,0,out-p-,,
-259,--,MANUEL,VELASCO COELLO,1980,m,pvem,,representacion proporcional,0,20180829,20180905,20190912,,,,,1,reran-,,reran pr
+259,--,MANUEL,VELASCO COELLO,1980,m,pvem,,representacion proporcional,0,20180829,20180905,20190912,,,,,1,Reelected,,reran pr
 260,--,EDUARDO ENRIQUE,MURAT HINOJOSA,1980,m,pvem,,representacion proporcional,1,20180906,20190903,,,,,,0,out-p-,,
