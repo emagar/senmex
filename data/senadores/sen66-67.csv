@@ -51,8 +51,8 @@ ord,edon,id,nom,patmat,birth,fm,part,postulo,eleccion,dsup,in1,out1,in2,repite,n
 50,9,df1s,FRANCISCO,CHIGUIL FIGUEROA,,m,,pvem.pt.morena,mayoria relativa,1,,,,,
 51,9,df2p,ERNESTINA,GODOY RAMOS,1954,f,morena,pvem.pt.morena,mayoria relativa,0,20240829,20240930,,,
 52,9,df2s,KAREN,CASTREJON TRUJILLO,,f,,pvem.pt.morena,mayoria relativa,1,,,,,
-53,9,df3p,CYNTHIA ILIANA,LOPEZ CASTRO,1987,f,pri,pan.pri.prd,primera minoria,0,20240829,,,d64-d65-s66-s67,Nuestra alumna
-54,9,df3s,ALICIA VIRGINIA,TELLEZ SANCHEZ,,f,,pan.pri.prd,primera minoria,1,,,,,
+53,9,df3p,CYNTHIA ILIANA,LOPEZ CASTRO,1987,f,indep,pan.pri.prd,primera minoria,0,20240829,,,d64-d65-s66-s67,Nuestra alumna – renuncia pri 29oct24
+54,9,df3s,ALICIA VIRGINIA,TELLEZ SANCHEZ,,f,pri,pan.pri.prd,primera minoria,1,,,,,
 55,10,dgo1p,ALEJANDRO,GONZALEZ YAÑEZ,1956,m,pt,pvem.pt.morena,mayoria relativa,0,20240829,,,64s-65s-66s-67s,
 56,10,dgo1s,JOSE ISIDRO BERTIN,ARIAS MEDRANO,,m,,pvem.pt.morena,mayoria relativa,1,,,,,
 57,10,dgo2p,LILIA MARGARITA,VALDEZ MARTINEZ,1955,f,morena,pvem.pt.morena,mayoria relativa,0,20240829,,,64s-65s-66s-67s,
@@ -125,7 +125,7 @@ ord,edon,id,nom,patmat,birth,fm,part,postulo,eleccion,dsup,in1,out1,in2,repite,n
 126,21,pue2s,MARIA ISABEL,MERLO TALAVERA,,f,,pvem.pt.morena,mayoria relativa,1,,,,,
 127,21,pue3p,NESTOR,CAMARILLO MEDINA,1987,m,pri,pan.pri.prd,primera minoria,0,20240829,,,,
 128,21,pue3s,TEODOMIRO,ORTEGA GONZALEZ,,m,,pan.pri.prd,primera minoria,1,,,,,
-129,22,que1p,MARIA GUADALUPE,MURGUIA GUTIERREZ,1955,f,pan,pan.pri.prd,mayoria relativa,0,20240829,,,64s-65s-66s-67s,coord pan
+129,22,que1p,MARIA GUADALUPE,MURGUIA GUTIERREZ,1955,f,pan,pan.pri.prd,mayoria relativa,0,20240829,,,64s-65s-66s-67s,coord pan sep2024-ene2025
 130,22,que1s,SONIA,ROCHA ACOSTA,,f,,pan.pri.prd,mayoria relativa,1,,,,,
 131,22,que2p,AGUSTIN,DORANTES LOMBARRI,1986,m,pan,pan.pri.prd,mayoria relativa,0,20240829,,,,
 132,22,que2s,ENRIQUE,VEGA CARRILES,,m,,pan.pri.prd,mayoria relativa,1,,,,,
@@ -229,7 +229,7 @@ ord,edon,id,nom,patmat,birth,fm,part,postulo,eleccion,dsup,in1,out1,in2,repite,n
 232,--,rp18s,HIME DEL CARMEN,REDIN MORALES,,,,pt,lista nacional,1,,,,,
 233,--,rp19p,YEIDCKOL,POLEVNSKY GURWITZ,1958,f,pt,pt,lista nacional,0,20240829,,,,
 234,--,rp19s,DENISSE,ORTIZ PEREZ,,,,pt,lista nacional,1,,,,,
-235,--,rp20p,RICARDO,ANAYA CORTES,1979,m,pan,pan,lista nacional,0,20240829,,,,
+235,--,rp20p,RICARDO,ANAYA CORTES,1979,m,pan,pan,lista nacional,0,20240829,,,62d-67s,coord pan feb2025
 236,--,rp20s,CARLOS ALBERTO,CARDENAS ALAMILLA,,,,pan,lista nacional,1,,,,,
 237,--,rp21p,MARKO ANTONIO,CORTES MENDOZA,1977,m,pan,pan,lista nacional,0,20240829,,,,
 238,--,rp21s,OMAR FRANCISCO,GUDIÑO MAGAÑA,,,,pan,lista nacional,1,,,,,
