@@ -1,0 +1,5 @@
+for file in *.html
+do
+    iconv -f latin1 -t ascii//TRANSLIT "$file" >"$file.new" &&
+    mv -f "$file.new" "$file"
+done
