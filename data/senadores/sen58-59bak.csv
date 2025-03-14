@@ -1,0 +1,168 @@
+ord,patmat,nombre,partido,estado,edon,birth,fm,dsmd,in1,out1,in2,suplente
+1,ADAME CASTILLO,MARCO ANTONIO,PAN,mor,16,,,,,,,Mar�a del Carmen Corral Romero
+2,AGUILAR BODEGAS ,JOSE ANTONIO,PRI,cps,8,,,,,,,Jes�s Enrique Jackson Ram�rez 
+3,AGUILAR GONZALEZ ,MICAELA,PAN,mex,15,,,,,,,Jorge Abel L�pez S�nchez
+4,ALANIS QUIÑONES ,ADRIAN,PRI,dgo,10,,,,,,,Benjam�n Gallegos Soto 
+5,ALANIZ POSADA ,RICARDO ,PAN,gua,11,,,,,,,Carlos Chaurand Arzate 
+6,ALDANA PRIETO ,LUIS RICARDO,PRI,rp,,,,,,,,Armando Mendez de la Luz
+7,AMAR SHABSHAB ,WADI,PAN,qui,22,,,,,,,Silvia Asunci�n Dom�nguez L�pez
+8,AMAYA TELLEZ ,RODIMIRO,SG,bcs,3,,,,,,,
+9,ANGELES CERON ,ESTEBAN MIGUEL,PRI,hgo,13,,,,,,,Jos� Pascual Grande S�nchez
+10,ARIAS APARICIO,EDUARDO,PAN,nl,18,,,,,,,
+11,ASTUDILLO FLORES ,HECTOR ANTONIO,PRI,gue,12,,,,,,,H�ctor Javier Hern�ndez Genis
+12,AYALA ALMEIDA ,JOEL,PRI,rp,,,,,,,,Ricardo  Alaniz Posada 
+13,BARTLETT DIAZ ,MANUEL,PRI,rp,,,,,,,,Jos� Ernesto Gil Elorduy 
+14,BECERRA RODRIGUEZ ,SALVADOR,PAN,col,7,,,,,,,Marco Antonio Adame Castillo
+15,BOJORQUEZ MUNGARAY,FRANCISCO,PRI,son,26,,,,,,,
+16,BONILLA ROBLES ,JOSE EULOGIO,PRI,zac,32,,,,,,,Jes�s Galv�n Mu�oz 
+17,BORREGO ESTRADA ,GENARO,PRI,zac,32,,,,,,,Luis Colosio Fern�ndez 
+18,BOURS CASTELO,EDUARDO ,PRI,son,26,,,,,,,Joaqu�n Cisneros Fern�ndez 
+19,BUGANZA SALMERON ,GERARDO,PAN,ver,30,,,,,,,Esteban Miguel Angeles Cer�n 
+20,BURGOS OCHOA ,LETICIA,PRD,rp,,,,,,,,Francisco Boj�rquez Mungaray
+21,CALDERON HINOJOSA ,LUISA MARIA,PAN,rp,,,,,,,,Carlos Madrazo Lim�n 
+22,CAMACHO QUIROZ ,CESAR,PRI,mex,15,,,,,,,Gloria Lavara Mej�a 
+23,CAMPUZANO GONZALEZ ,ROMULO,PAN,dgo,10,,,,,,,Ram�n Mota S�nchez 
+24,CANAVATI TAFICH ,RICARDO ,PRI,nl,18,,,,,,,Rafael Melgoza Radillo
+25,CAÑEDO BENITEZ,RAFAEL,PRI,pue,20,,,,,,,Cecilia Romero Castillo 
+26,CANTON ZETINA ,OSCAR,PRI,tab,27,,,,,,,David Jim�nez Gonz�lez 
+27,CARDENAS BATEL,LAZARO,PRD,rp,,,,,,,,Carlos Rojas Guti�rrez 
+28,CARDENAS GUTIERREZ ,GUSTAVO A,PAN,tam,28,,,,,,,Gildardo G�mez Ver�nica 
+29,CARDENAS HERNANDEZ ,RAYMUNDO,PRD,zac,32,,,,,,,Jos� Antonio Aguilar Bodegas 
+30,CASTAÑEDA ALVAREZ,ERASMO,PRD,bcs,3,,,,,,,
+31,CASTAÑEDA PEREZ,JOSE ALBERTO,PAN,yuc,31,,,,,,,
+32,CASTELLANOS CORTES ,SARA ISABEL,PVEM,rp,,,,,,,,Javier Corral Jurado 
+33,CASTRO CASTRO,JOSE ADALBERTO,PRI,sin,25,,,,,,,
+34,CASTRO CERVANTES,MOISES,PRD,tab,27,,,,,,,
+35,CHAURAND ARZATE ,CARLOS,PRI,gua,11,,,,,,,H�ctor Federico Ling Altamirano 
+36,CHAVARRIA BARRERA ,ARMANDO,PRD,gue,12,,,,,,,V�ctor Manuel M�ndez Lanz
+37,CISNEROS FERNANDEZ ,JOAQUIN,PRI,tla,29,,,,,,,Ismael A. Hern�ndez Deras 
+38,COLOSIO FERNANDEZ ,LUIS,PRI,rp,,,,,,,,Salvador Becerra Rodr�guez 
+39,CORRAL AVILA,RAMON ,PAN,son,26,,,,,,,Genaro Borrego Estrada 
+40,CORRAL JURADO ,JAVIER,PAN,chi,5,,,,,,,Mois�s Castro Cervantes
+41,CORRAL ROMERO,MARIA DEL CARMEN,PAN,mex,15,,,,,,,
+42,CORTINA REYNOSO,MANUEL,PAN,ags,1,,,,,,,
+43,COTA OSUNA ,JOSE CARLOS,PRI,bcs,3,,,,,,,Emilia Patricia G�mez Bravo 
+44,CRUZ LOPEZ,OSCAR,PRD,oax,19,,,,,,,
+45,CRUZ MARTINEZ ,MARCOS CARLOS,PRD,rp,,,,,,,,Adri�n Alan�s Qui�ones 
+46,CRUZ MUÑOZ ,MARIA ELENA,PAN,jal,14,,,,,,,
+47,DE LA VEGA GARCIA ,NETZAHUALCOYOTL,PRI,rp,,,,,,,,Mar�a Ver�nica Mu�oz Parra
+48,DIAZ CASTRO ,LAURO,PRI,sin,25,,,,,,,Rita Mar�a Esquivel Reyes 
+49,DOMINGUEZ LOPEZ,SILVIA ASUNCION,PRI,ver,30,,,,,,,
+50,ESCALANTE JASSO ,ARACELY,PRI,cam,4,,,,,,,Antonio Garc�a Torres 
+51,ESCANDON CADENAS ,RUTILIO CRUZ,PRD,cps,8,,,,,,,Filomena Margaiz Ram�rez
+52,ESQUIVEL REYES ,RITA MARIA,PAN,nay,17,,,,,,,Lydia Madero Garc�a 
+53,FERNANDEZ DE CEVALLOS RAMOS ,DIEGO,PAN,rp,,,,,,,,Jos� Natividad  Gonz�lez Par�s 
+54,FERNANDEZ DE CEVALLOS Y URUETA ,FRANCISCO,PAN,que,21,,,,,,,Fidel Herrera Beltr�n 
+55,FERNANDEZ RODRIGUEZ ,MARCO ANTONIO,PRI,nay,17,,,,,,,Armando Chavarr�a Barrera 
+56,FERRER RODRIGUEZ,MARIA ESTHER,PAN,rp,,,,,,,,
+57,FRAILE GARCIA ,FRANCISCO A,PAN,pue,20,,,,,,,H�ctor Antonio Astudillo Flores 
+58,FRANCO JIMENEZ,JORGE EDUARDO,PRI,oax,19,,,,,,,
+59,GALLEGOS SOTO ,BENJAMIN,PAN,ags,1,,,,,,,Omar Raymundo G�mez Flores 
+60,GALVAN MUÑOZ ,JESUS,PAN,df,9,,,,,,,Rigoberto Gonz�lez Gonz�lez
+61,GAMBOA PATRON ,EMILIO,PRI,rp,,,,,,,,Luis Ricardo Aldana Prieto 
+62,GARCIA TORRES ,ANTONIO,PRI,rp,,,,,,,,L�zaro C�rdenas Batel
+63,GARZA GALINDO ,LAURA ALICIA,PRI,tam,28,,,,,,,Luisa Mar�a Calder�n Hinojosa 
+64,GERARDO HIGUERA ,RICARDO,PRD,bcs,3,,,,,,,Raymundo C�rdenas Hern�ndez 
+65,GIL ELORDUY ,JOSE ERNESTO,PRI,hgo,13,,,,,,,Laura Alicia Garza Galindo 
+66,GOMEZ BRAVO ,EMILIA PATRICIA,PVEM,df,9,,,,,,,Rutilio Cruz Escand�n Cadenas 
+67,GOMEZ ESPARZA ,FERNANDO,PRI,ags,1,,,,,,,Judit Magdalena Guerrero L�pez
+68,GOMEZ FLORES ,OMAR RAYMUNDO,PRI,jal,14,,,,,,,Adalberto Arturo Madero Quiroga 
+69,GOMEZ VERONICA ,GILDARDO,PAN,jal,14,,,,,,,Jeffrey Max Jones Jones 
+70,GONZALEZ GONZALEZ,RIGOBERTO,PAN,nl,18,,,,,,,
+71,GONZALEZ HERNANDEZ ,YOLANDA EUGENIA,PRI,san,24,,,,,,,Jorge Eduardo Franco Jim�nez
+72,GONZALEZ MARTINEZ ,JORGE EMILIO,PVEM,rp,,,,,,,,Erasmo Casta�eda �lvarez
+73,GONZALEZ PARAS ,JOSE NATIVIDAD ,PRI,rp,,,,,,,,Mar�a Elena Cruz Mu�oz 
+74,GONZALEZ ZARUR ,MARIANO,PRI,tla,29,,,,,,,Marco Antonio Fern�ndez Rodr�guez 
+75,GRANDE SANCHEZ,JOSE PASCUAL,PRI,tla,29,,,,,,,
+76,GUERRERO LOPEZ,JUDIT MAGDALENA,PRI,zac,32,,,,,,,
+77,GUTIERREZ BARRIOS,FERNANDO,PRI,ver,30,,,,,,,Alfredo Mart�n Reyes Vel�zquez 
+78,GUTIERREZ GUTIERREZ , ALEJANDRO,PRI,coa,6,,,,,,,Jos� Antonio Haghenbeck C�mara 
+79,GUZMAN LAGUNES,NOEMI ZOILA,PRI,ver,30,,,,,,,
+80,HAGHENBECK CAMARA ,JOSE ANTONIO,PAN,hgo,13,,,,,,,Rafael Ca�edo Benitez
+81,HAMDAN AMAD ,FAUZI,PAN,rp,,,,,,,,Jos� Carlos Cota Osuna 
+82,HERBERT PEREZ ,GUILLERMO,PAN,que,21,,,,,,,Alberto Miguel Mart�nez Mireles 
+83,HERNANDEZ DERAS ,ISMAEL A.,PRI,dgo,10,,,,,,,Wadi Amar Shabshab 
+84,HERNANDEZ ENRIQUEZ ,SILVIA,PRI,que,21,,,,,,,H�ctor Larios C�rdova 
+85,HERNANDEZ GENIS,HECTOR JAVIER,PAN,mor,16,,,,,,,
+86,HERRERA BELTRAN ,FIDEL,PRI,ver,30,,,,,,,Apolonio M�ndez Meneses
+87,HERRERA MENDOZA,JOSE GUILLERMO,SG,rp,,,,,,,,
+88,JACKSON RAMIREZ ,JESUS ENRIQUE,PRI,rp,,,,,,,,Noem� Zoila Guzm�n Lagunes
+89,JAUREGUI ROBLES ,CESAR,PAN,rp,,,,,,,,Silvia Hern�ndez Enr�quez 
+90,JIMENEZ GONZALEZ ,DAVID,PRI,mor,16,,,,,,, Alejandro Guti�rrez Guti�rrez 
+91,JOAQUIN COLDWELL ,ADDY CECILIA,PAN,qui,22,,,,,,,Jos� Adalberto Castro Castro
+92,JONES JONES ,JEFFREY MAX,PAN,chi,5,,,,,,,Mariano Gonz�lez Zarur 
+93,LARIOS CORDOVA ,HECTOR,PAN,son,26,,,,,,,Ram�n  Corral Avila
+94,LARREGUI NAGEL,ERIKA,PVEM,rp,,,,,,,,
+95,LAVARA MEJIA ,GLORIA,PVEM,rp,,,,,,,,Sa�l L�pez Sollano
+96,LING ALTAMIRANO ,HECTOR FEDERICO,PAN,rp,,,,,,,,Joel Ayala Almeida 
+97,LOPEZ NELIO SANTIAGO,DANIEL,PRD,oax,19,,,,,,,Daniel L�pez Nelio Santiago
+98,LOPEZ SANCHEZ,JORGE ABEL,PRI,rp,,,,,,,,
+99,LOPEZ SOLLANO,SAUL,PRD,gue,12,,,,,,,
+100,LOZANO ARMENGOL ,JORGE,PAN,san,24,,,,,,,Jose Guillermo Herrera Mendoza
+101,LUEBBERT GUTIERREZ ,OSCAR,PRI,tam,28,,,,,,,Manuel Bartlett D�az 
+102,MADERO GARCIA ,LYDIA,PAN,rp,,,,,,,,Ricardo  Canavati Tafich 
+103,MADERO QUIROGA ,ADALBERTO ARTURO,PAN,nl,18,,,,,,,Fernando Marg�in Berlanga 
+104,MADRAZO LIMON ,CARLOS,PAN,mex,15,,,,,,,Jorge Emilio Gonz�lez Mart�nez 
+105,MADRID TOVILLA ,ARELY,PRI,cps,8,,,,,,,El�as Miguel Moreno Brizuela 
+106,MARGAIN BERLANGA ,FERNANDO,PAN,nl,18,,,,,,,R�mulo Campuzano Gonz�lez 
+107,MARGAIZ RAMIREZ,FILOMENA,PAN,gua,11,,,,,,,
+108,MARTINEZ MIRELES ,ALBERTO MIGUEL,PAN,san,24,,,,,,,Francisco Fern�ndez de Cevallos y Urueta 
+109,MEDINA PLASCENCIA ,CARLOS,PAN,rp,,,,,,,,Emilio Gamboa Patr�n 
+110,MELGOZA RADILLO,RAFAEL,PRD,rp,,,,,,,,
+111,MENDEZ DE LA LUZ,ARMANDO,SG,rp,,,,,,,,
+112,MENDEZ LANZ,VICTOR MANUEL,PRI,cam,4,,,,,,,Leticia Burgos Ochoa 
+113,MENDEZ MARQUEZ,VICTORIA EUGENIA,PRI,rp,,,,,,,,
+114,MENDEZ MENESES,APOLONIO,PAN,pue,20,,,,,,,
+115,MICHEL CAMARENA ,HECTOR,PRI,col,7,,,,,,,C�sar J�uregui Robles 
+116,MONTAÑO YAMUNI ,JOAQUIN,PAN,sin,25,,,,,,,Marcos Carlos Cruz Mart�nez 
+117,MORENO BRIZUELA ,ELIAS MIGUEL,PRD,rp,,,,,,,,Gustavo A C�rdenas Guti�rrez 
+118,MORGAN ALVAREZ ,RAFAEL GILBERTO,PAN,bc,2,,,,,,,Netzahualc�yotl De la Vega Garc�a 
+119,MOTA SANCHEZ ,RAMON,PRI,rp,,,,,,,,Mar�a Esther Ferrer Rodr�guez
+120,MUÑOZ PARRA,MARIA VERONICA,PRI,gue,12,,,,,,,
+121,MURO GONZALEZ,ANA BRICIA,PRI,dgo,10,,,,,,,
+122,NAVARRO QUINTANA,MARCELA,PAN,tam,28,,,,,,,
+123,NAVARRO QUINTERO ,MIGUEL ANGEL,PRD,nay,17,,,,,,,Micaela Aguilar Gonz�lez 
+124,NORDHAUSEN GONZALEZ ,JORGE RUBEN,PAN,cam,4,,,,,,,Eduardo  Bours Castelo
+125,OJEDA ZUBIETA,CESAR RAUL,PRD,tab,27,,,,,,,Antonio de Jes�s Remes Ojeda
+126,OLIVA RAMIREZ,JUAN MANUEL,PAN,gua,11,,,,,,,Humberto Roque Villanueva 
+127,ORTEGA MARTINEZ ,JESUS,PRD,rp,,,,,,,,Gerardo Buganza Salmer�n 
+128,OSUNA JAIME ,HECTOR GUILLERMO,PAN,bc,2,,,,,,,Carlos Medina Plascencia 
+129,OVANDO MARTINEZ ,EDUARDO,PRI,qui,22,,,,,,,Francisco A Fraile Garc�a 
+130,PALACIOS CORDERO,BLAS RAFAEL,PRD,rp,,,,,,,,
+131,PAREDES LARA ,ORLANDO ALBERTO,PRI,yuc,31,,,,,,,Ana Bricia Muro Gonz�lez
+132,PATRON LAVIADA,PATRICIO JOSE,PAN,yuc,31,,,,,,,Mar�a del Carmen Ram�rez Garc�a 
+133,PEREZ DE ALVA BLANCO ,ROBERTO,PRI,bc,2,,,,,,,Oscar Luebbert Guti�rrez 
+134,PORRAS BAUTISTA,ELEUTERIO,PAN,hgo,13,,,,,,,
+135,RAMIREZ GARCIA ,MARIA DEL CARMEN,PRD,tla,29,,,,,,,Erika Larregui Nagel
+136,REMES OJEDA,ANTONIO DE JESUS,PAN,ver,30,,,,,,,
+137,REYES VELAZQUEZ ,ALFREDO MARTIN,PAN,ags,1,,,,,,,Aracely Escalante Jasso 
+138,RICO SAMANIEGO ,LUIS ALBERTO,PAN,coa,6,,,,,,,Jorge Lozano Armengol 
+139,RIOS ALVAREZ ,SERAFIN,PRD,rp,,,,,,,,Sara Isabel Castellanos Cort�s 
+140,RODRIGUEZ PRATS ,JUAN JOSE,PAN,rp,,,,,,,,Fauzi Hamdan Amad 
+141,ROJAS GUTIERREZ ,CARLOS,PRI,rp,,,,,,,,Rafael Gilberto Morgan Alvarez 
+142,ROMERO CASTILLO ,CECILIA,PAN,rp,,,,,,,,Arely Madrid Tovilla 
+143,ROQUE VILLANUEVA ,HUMBERTO,PRI,rp,,,,,,,,Guillermo Herbert P�rez 
+144,RUBIO BARTHELL,ERIC LUIS,PRI,yuc,31,,,,,,,Ricardo Gerardo Higuera 
+145,RUIZ ORTIZ ,ULISES ERNESTO,PRI,oax,19,,,,,,,Lauro D�az Castro 
+146,SALAS PEREZ,NICOLAS TEODORO,PRD,tla,29,,,,,,,
+147,SALDAÑA PEREZ,MARIA LUCERO,PRI,pue,20,,,,,,,
+148,SANCHEZ CARREÑO ,MIGUEL SADOT,PRI,oax,19,,,,,,,Yolanda Eugenia Gonz�lez Hern�ndez 
+149,SANTISTEBAN RUIZ,ANTONIO,PRD,bcs,3,,,,,,,
+150,SAURI RIANCHO ,DULCE MARIA,PRI,rp,,,,,,,,Diego Fern�ndez de Cevallos Ramos 
+151,SIERRA SANCHEZ ,GERMAN,PRI,pue,20,,,,,,,H�ctor Michel Camarena 
+152,SODI DE LA TIJERA ,DEMETRIO,SG,df,9,,,,,,,
+153,SOTO SANCHEZ,ANTONIO,PRD,rp,,,,,,,,Joaqu�n Monta�o Yamuni 
+154,STEPHENSON PEREZ,SUSANA,PAN,gua,11,,,,,,,
+155,TAMAYO MORALES ,MARTHA SOFIA,PRI,sin,25,,,,,,,Addy Cecilia Joaqu�n Coldwell 
+156,TORRES HERRERA ,VICTOR MANUEL,PAN,col,7,,,,,,,Rodimiro Amaya T�llez 
+157,TRUJILLO ZENTELLA ,GEORGINA ,PRI,tab,27,,,,,,,Jos� Alberto Casta�eda P�rez
+158,UREÑA MONTOYA,FLAVIA ,PRI,nay,17,,,,,,,
+159,VAZQUEZ VIGIL ,TOMAS,PRI,rp,,,,,,,,Fernando G�mez Esparza 
+160,VELASCO RODRIGUEZ ,VERONICA,PVEM,rp,,,,,,,,Jos� Eulogio Bonilla Robles 
+161,VICARIO CASTREJON ,HECTOR,PRI,gue,12,,,,,,,C�sar Camacho Quiroz 
+162,VICENCIO ALVAREZ ,FELIPE DE JESUS,PAN,jal,14,,,,,,,Fernando Gutierrez Barrios
+163,VILLALOBOS ORGANISTA,CARLOS MANUEL,PAN,son,26,,,,,,,
+164,XICOTENCATL REYNOSO ,MARCO ANTONIO,PAN,mor,16,,,,,,,Manuel Cortina Reynoso
+165,ZAPATA GARCIA ,JORGE DOROTEO,PRI,chi,5,,,,,,,Victoria Eugenia M�ndez M�rquez
+166,ZARAZUA ROCHA,RUBEN,PRI,nl,18,,,,,,,
+167,ZERMEÑO INFANTE ,JORGE,PAN,coa,6,,,,,,,Oscar Cruz L�pez
