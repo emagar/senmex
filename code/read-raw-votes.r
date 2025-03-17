@@ -168,8 +168,9 @@ for (i in 1:length(fls)){
     sel.1 <- grep("Diario 1.+Abr 26", t, ignore.case = TRUE)                      ## vote id follows ~12 lines
     sel.2 <- grep("[áa]BRAn?SE.+el SISTEMA.+ELECTR.NICO", t, ignore.case = TRUE)    ## before roll call
     if (length(sel.2)==0) sel.2 <- grep("ada CONFORME.*SISTEMA.+ELECTR.NICO", t, ignore.case = TRUE) ## attempt #2
-    if (length(sel.2)==1) sel.3 <- length(t)-2  ## bring text til end of file (will check if all files end soon after roll call
-    if (length(sel.2) >1) sel.3 <- grep("(?:recibieron|emitieron|han emitido) [0-9]+ votos", t, ignore.case = TRUE) ## after roll call
+    sel.3 <- length(t)-2  ## bring text til end of file (will check if all files end soon after roll call
+    ##if (length(sel.2)==1) sel.3 <- length(t)-2  ## bring text til end of file (will check if all files end soon after roll call
+    ##if (length(sel.2) >1) sel.3 <- grep("(?:recibieron|emitieron|han emitido) [0-9]+ votos", t, ignore.case = TRUE) ## after roll call
     ##if (length(sel.2) >1) sel.3 <- grep("votos (?:a|en) (?:favor|pro)", t, ignore.case = TRUE) ## after roll call
     ## if (length(sel.3)==0){
     ##     sel.3 <- grep("secretari[oa]", t, ignore.case = TRUE)                         ## Secretario's interventions
@@ -193,47 +194,216 @@ for (i in 1:length(fls)){
         )
     }
     ##
-    if (length(sel.2[!is.na(sel.2)])>1 & length(sel.2[!is.na(sel.2)])==length(sel.3[!is.na(sel.3)])) {
-        sel.4 <- paste(sel.2, sel.3, sep=":")
+    ##if (length(sel.2[!is.na(sel.2)])>1 & length(sel.2[!is.na(sel.2)])==length(sel.3[!is.na(sel.3)])) {
+    if (length(sel.2[!is.na(sel.2)])>1) {
+        ##sel.4 <- paste(sel.2, sel.3, sep=":")
+        sel.fr <- c(sel.1, sel.2) ## will get all text between breaks, finding end of roll call too hard as secretario is not systematic
+        sel.to <- c(sel.2, sel.3)
         t.sub <- vector() ## initialize empty vector
-        for (j in 1:length(sel.4)){
+        for (j in 1:length(sel.fr)){
             #j <- 1 ## debug
             t.sub <- c(t.sub,
                        "In remembrance of Francisco Cantu" ## a marker that shows start of the vector (useful when concatenating with next vote)
                      , "Multivote"
                      , fls[i]                              ## raw file whence this info derived
                      , t[(sel.1+1):(sel.1+13)]             ## vote id
-                     , t[eval(str2expression(sel.4[j]))]   ## roll call with aye/nay sums at end
+                     , t[sel.fr[j]:sel.to[j]]              ## roll call with aye/nay sums at end
+                     ##, t[eval(str2expression(sel.4[j]))]   ## roll call with aye/nay sums at end
                        )
         }
     }
+    ## ##
+    ## if (                                 length(sel.2[!is.na(sel.2)])!=length(sel.3[!is.na(sel.3)])) {
+    ##     print(paste("Asymmetric sels", fls[i]))
+    ##     break
+    ## }
     ##
-    if (                                 length(sel.2[!is.na(sel.2)])!=length(sel.3[!is.na(sel.3)])) {
-        print(paste("Asymmetric sels", fls[i]))
-        break
-    }
-    ##
-    ## append vote to others
+    ## append vote(s) to rest
     per.v <- c(per.v, t.sub)
     rm(sel.1, sel.2, sel.3, t, t.sub) ## clean
 }
-i
 
-tmp <- c(tmp,i)
-fls[tmp]
-
+per <- "60_2" ## periodo manipulated
+##
+## all the files that Francisco sent
+fls <- c("40.html", "116.html")
+##
+per.v <- c("Periodo de sesiones:", per) ## add new periodo marker
+##
+for (i in 1:length(fls)){
+    ##i <- 1 ## debug
+    t <- readLines(paste0(per, "/", fls[i], ".txt")) ## make path to file
+    t <- gsub(" ", "", t)
+    t <- gsub("[ ]{2}", " ", t)  ## drop double spaces
+    t <- gsub("^[ ]+", "", t)    ## drop leading spaces
+    t <- gsub("[ ]+$", "", t)    ## drop trailing spaces
+    t <- gsub("[\"]", "", t)     ## drop quotes
+    t <- t[-which(t=="")]        ## drop empty lines
+    ##
+    ##fls[i]; t[141:375]  ## debug
+    ##
+    ## if (i %in% c(46,86,96,112,139,227)){ ## these I did by hand, extract roll call on top
+    ##     t.sub <- t[1:c(grep("----end----",t)-1)]
+    ##     per.v <- c(per.v, t.sub)
+    ##     next
+    ## }
+    ##
+    ## get relevant indexes
+    ##sel.1 <- grep("Diario 1.+Abr 28", t, ignore.case = TRUE)                      ## vote id follows ~12 lines
+    sel.1 <- grep("Diario 1.+Abr 29", t, ignore.case = TRUE)                      ## vote id follows ~12 lines
+    sel.2 <- grep("[áa]BRAn?SE.+el SISTEMA.+ELECTR.NICO", t, ignore.case = TRUE)    ## before roll call
+    if (length(sel.2)==0) sel.2 <- grep("ada CONFORME.*SISTEMA.+ELECTR.NICO", t, ignore.case = TRUE) ## attempt #2
+    sel.3 <- length(t)-2  ## bring text til end of file (will check if all files end soon after roll call
+    ##if (length(sel.2)==1) sel.3 <- length(t)-2  ## bring text til end of file (will check if all files end soon after roll call
+    ##if (length(sel.2) >1) sel.3 <- grep("(?:recibieron|emitieron|han emitido) [0-9]+ votos", t, ignore.case = TRUE) ## after roll call
+    ##if (length(sel.2) >1) sel.3 <- grep("votos (?:a|en) (?:favor|pro)", t, ignore.case = TRUE) ## after roll call
+    ## if (length(sel.3)==0){
+    ##     sel.3 <- grep("secretari[oa]", t, ignore.case = TRUE)                         ## Secretario's interventions
+    ##     sel.3 <- sel.3[which(sel.3 > sel.2)][1]                                       ## The first one after roll call
+    ## }
+    ##sel.1; sel.2; sel.3 ## debug
+    ##t[sel.3]
+    ##
+    if (length(sel.1[!is.na(sel.1)])==0 | length(sel.2[!is.na(sel.2)])==0 | length(sel.3[!is.na(sel.3)])==0) {
+        print(paste("some sel.. empty", fls[i]))
+        break
+    }
+    ##
+    if (length(sel.1[!is.na(sel.1)])==1 & length(sel.2[!is.na(sel.2)])==1 & length(sel.3[!is.na(sel.3)])==1) {
+        ## subset vector with relevant info
+        t.sub <- c(
+            "In remembrance of Francisco Cantu" ## a marker that shows start of the vector (useful when concatenating with next vote) 
+          , fls[i]                              ## raw file whence this info derived
+          , t[(sel.1+1):(sel.1+13)]             ## vote id
+          , t[(sel.2+1):(sel.3+2)]              ## roll call with aye/nay sums at end
+        )
+    }
+    ##
+    ##if (length(sel.2[!is.na(sel.2)])>1 & length(sel.2[!is.na(sel.2)])==length(sel.3[!is.na(sel.3)])) {
+    if (length(sel.2[!is.na(sel.2)])>1) {
+        ##sel.4 <- paste(sel.2, sel.3, sep=":")
+        sel.fr <- c(sel.1, sel.2) ## will get all text between breaks, finding end of roll call too hard as secretario is not systematic
+        sel.to <- c(sel.2, sel.3)
+        t.sub <- vector() ## initialize empty vector
+        for (j in 1:length(sel.fr)){
+            #j <- 1 ## debug
+            t.sub <- c(t.sub,
+                       "In remembrance of Francisco Cantu" ## a marker that shows start of the vector (useful when concatenating with next vote)
+                     , "Multivote"
+                     , fls[i]                              ## raw file whence this info derived
+                     , t[(sel.1+1):(sel.1+13)]             ## vote id
+                     , t[sel.fr[j]:sel.to[j]]              ## roll call with aye/nay sums at end
+                     ##, t[eval(str2expression(sel.4[j]))]   ## roll call with aye/nay sums at end
+                       )
+        }
+    }
+    ## ##
+    ## if (                                 length(sel.2[!is.na(sel.2)])!=length(sel.3[!is.na(sel.3)])) {
+    ##     print(paste("Asymmetric sels", fls[i]))
+    ##     break
+    ## }
+    ##
+    ## append vote(s) to rest
+    per.v <- c(per.v, t.sub)
+    rm(sel.1, sel.2, sel.3, t, t.sub) ## clean
+}
 ##
 ## append votes to all.v
 all.v <- c(all.v, per.v)
 tail(all.v)
+length(all.v)
+
+per <- "61_2" ## periodo manipulated
+##
+## all the files that Francisco sent
+fls <- c("18.html", "34.html", "49.html", "50.html", "51.html", "56.html", "70.html", "75.html", "112.html", "113.html", "114.html", "116.html", "168.html", "248.html", "249.html", "256.html", "257.html", "258.html", "265.html", "266.html", "306.html", "346.html", "347.html", "348.html", "349.html", "350.html", "385.html", "386.html", "391.html", "412.html", "413.html", "418.html", "430.html", "462.html", "463.html", "464.html", "465.html", "466.html", "467.html", "479.html", "480.html", "489.html", "490.html", "491.html", "492.html", "502.html", "503.html", "789.html", "791.html", "793.html", "794.html", "795.html", "796.html", "848.html", "849.html", "850.html", "851.html", "852.html", "853.html", "854.html", "879.html", "880.html", "881.html", "1034.html", "1053.html", "1054.html", "1132.html", "1133.html", "1154.html", "1175.html", "1176.html", "1186.html", "1217.html", "1218.html", "1225.html", "1238.html", "1240.html", "1241.html", "1242.html", "1243.html", "1244.html", "1249.html", "1269.html", "1324.html", "1378.html", "1379.html", "1380.html", "1381.html", "1382.html", "1383.html", "1384.html", "1385.html", "1386.html", "1387.html", "1394.html", "1415.html", "1416.html", "1418.html", "1435.html", "1447.html", "1451.html", "1475.html", "1476.html", "1477.html", "1479.html", "1509.html", "1510.html", "1511.html", "1512.html", "1513.html", "1536.html", "1537.html", "1538.html", "1539.html", "1581.html", "1590.html", "1591.html", "1592.html", "1593.html", "1594.html", "1595.html", "1596.html", "1604.html", "1639.html", "1657.html", "1658.html", "1775.html", "1778.html", "1782.html", "1783.html", "1784.html", "1785.html", "1786.html", "1788.html", "1789.html", "1831.html")
+##
+per.v <- c("Periodo de sesiones:", per) ## add new periodo marker
+##
+for (i in 1:length(fls)){
+    ##i <- 1 ## debug
+    t <- readLines(paste0(per, "/", fls[i], ".txt")) ## make path to file
+    t <- gsub(" ", "", t)
+    t <- gsub("[ ]{2}", " ", t)  ## drop double spaces
+    t <- gsub("^[ ]+", "", t)    ## drop leading spaces
+    t <- gsub("[ ]+$", "", t)    ## drop trailing spaces
+    t <- gsub("[\"]", "", t)     ## drop quotes
+    t <- t[-which(t=="")]        ## drop empty lines
+    ##
+    ##fls[i]; t[141:375]  ## debug
+    ##
+    ## if (i %in% c(46,86,96,112,139,227)){ ## these I did by hand, extract roll call on top
+    ##     t.sub <- t[1:c(grep("----end----",t)-1)]
+    ##     per.v <- c(per.v, t.sub)
+    ##     next
+    ## }
+    ##
+    ## get relevant indexes
+    ##sel.1 <- grep("Diario 1.+Abr 28", t, ignore.case = TRUE)                      ## vote id follows ~12 lines
+    sel.1 <- grep("Diario 1.+Abr 29", t, ignore.case = TRUE)                      ## vote id follows ~12 lines
+    sel.2 <- grep("[áa]BRAn?SE.+el SISTEMA.+ELECTR.NICO", t, ignore.case = TRUE)    ## before roll call
+    if (length(sel.2)==0) sel.2 <- grep("ada CONFORME.*SISTEMA.+ELECTR.NICO", t, ignore.case = TRUE) ## attempt #2
+    sel.3 <- length(t)-2  ## bring text til end of file (will check if all files end soon after roll call
+    ##if (length(sel.2)==1) sel.3 <- length(t)-2  ## bring text til end of file (will check if all files end soon after roll call
+    ##if (length(sel.2) >1) sel.3 <- grep("(?:recibieron|emitieron|han emitido) [0-9]+ votos", t, ignore.case = TRUE) ## after roll call
+    ##if (length(sel.2) >1) sel.3 <- grep("votos (?:a|en) (?:favor|pro)", t, ignore.case = TRUE) ## after roll call
+    ## if (length(sel.3)==0){
+    ##     sel.3 <- grep("secretari[oa]", t, ignore.case = TRUE)                         ## Secretario's interventions
+    ##     sel.3 <- sel.3[which(sel.3 > sel.2)][1]                                       ## The first one after roll call
+    ## }
+    ##sel.1; sel.2; sel.3 ## debug
+    ##t[sel.3]
+    ##
+    if (length(sel.1[!is.na(sel.1)])==0 | length(sel.2[!is.na(sel.2)])==0 | length(sel.3[!is.na(sel.3)])==0) {
+        print(paste("some sel.. empty", fls[i]))
+        break
+    }
+    ##
+    if (length(sel.1[!is.na(sel.1)])==1 & length(sel.2[!is.na(sel.2)])==1 & length(sel.3[!is.na(sel.3)])==1) {
+        ## subset vector with relevant info
+        t.sub <- c(
+            "In remembrance of Francisco Cantu" ## a marker that shows start of the vector (useful when concatenating with next vote) 
+          , fls[i]                              ## raw file whence this info derived
+          , t[(sel.1+1):(sel.1+13)]             ## vote id
+          , t[(sel.2+1):(sel.3+2)]              ## roll call with aye/nay sums at end
+        )
+    }
+    ##
+    ##if (length(sel.2[!is.na(sel.2)])>1 & length(sel.2[!is.na(sel.2)])==length(sel.3[!is.na(sel.3)])) {
+    if (length(sel.2[!is.na(sel.2)])>1) {
+        ##sel.4 <- paste(sel.2, sel.3, sep=":")
+        sel.fr <- c(sel.1, sel.2) ## will get all text between breaks, finding end of roll call too hard as secretario is not systematic
+        sel.to <- c(sel.2, sel.3)
+        t.sub <- vector() ## initialize empty vector
+        for (j in 1:length(sel.fr)){
+            #j <- 1 ## debug
+            t.sub <- c(t.sub,
+                       "In remembrance of Francisco Cantu" ## a marker that shows start of the vector (useful when concatenating with next vote)
+                     , "Multivote"
+                     , fls[i]                              ## raw file whence this info derived
+                     , t[(sel.1+1):(sel.1+13)]             ## vote id
+                     , t[sel.fr[j]:sel.to[j]]              ## roll call with aye/nay sums at end
+                     ##, t[eval(str2expression(sel.4[j]))]   ## roll call with aye/nay sums at end
+                       )
+        }
+    }
+    ## ##
+    ## if (                                 length(sel.2[!is.na(sel.2)])!=length(sel.3[!is.na(sel.3)])) {
+    ##     print(paste("Asymmetric sels", fls[i]))
+    ##     break
+    ## }
+    ##
+    ## append vote(s) to rest
+    per.v <- c(per.v, t.sub)
+    rm(sel.1, sel.2, sel.3, t, t.sub) ## clean
+}
+##
+## append votes to all.v
+all.v <- c(all.v, per.v)
+tail(all.v)
+length(all.v)
 
 ##
 ## save per.v for exploration
-write.csv(all.v, file = paste(per, "all.csv", sep = "/"), row.names = TRUE)
+write.csv(all.v, file = "all.csv", row.names = TRUE)
 
-i
-head(t)                
-t[540]
-
-
-dim(t)
