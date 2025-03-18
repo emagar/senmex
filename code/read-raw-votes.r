@@ -12,7 +12,7 @@ fls <- c("832.html", "847.html", "848.html", "869.html", "870.html", "871.html",
 per.v <- c("Periodo de sesiones:", per) ## prep vecto that will receive text of all roll calls
 ##
 for (i in 1:length(fls)){
-    ##i <- 54 ## debug
+    ##i <- 92 ## debug
     t <- readLines(paste0(per, "/", fls[i], ".txt")) ## make path to file
     t <- gsub(" ", "", t)
     t <- gsub("[ ]{2}", " ", t)  ## drop double spaces
@@ -222,6 +222,11 @@ for (i in 1:length(fls)){
     per.v <- c(per.v, t.sub)
     rm(sel.1, sel.2, sel.3, t, t.sub) ## clean
 }
+##
+## append votes to all.v
+all.v <- c(all.v, per.v)
+tail(all.v)
+length(all.v)
 
 per <- "60_2" ## periodo manipulated
 ##
@@ -231,7 +236,7 @@ fls <- c("40.html", "116.html")
 per.v <- c("Periodo de sesiones:", per) ## add new periodo marker
 ##
 for (i in 1:length(fls)){
-    ##i <- 1 ## debug
+    ##i <- 2 ## debug
     t <- readLines(paste0(per, "/", fls[i], ".txt")) ## make path to file
     t <- gsub(" ", "", t)
     t <- gsub("[ ]{2}", " ", t)  ## drop double spaces
@@ -282,8 +287,8 @@ for (i in 1:length(fls)){
     ##if (length(sel.2[!is.na(sel.2)])>1 & length(sel.2[!is.na(sel.2)])==length(sel.3[!is.na(sel.3)])) {
     if (length(sel.2[!is.na(sel.2)])>1) {
         ##sel.4 <- paste(sel.2, sel.3, sep=":")
-        sel.fr <- c(sel.1, sel.2) ## will get all text between breaks, finding end of roll call too hard as secretario is not systematic
-        sel.to <- c(sel.2, sel.3)
+        sel.fr <- sel.2 ## will get all text between breaks, finding end of roll call too hard as secretario is not systematic
+        sel.to <- c(sel.2[-1], sel.3)
         t.sub <- vector() ## initialize empty vector
         for (j in 1:length(sel.fr)){
             #j <- 1 ## debug
@@ -321,7 +326,7 @@ fls <- c("18.html", "34.html", "49.html", "50.html", "51.html", "56.html", "70.h
 per.v <- c("Periodo de sesiones:", per) ## add new periodo marker
 ##
 for (i in 1:length(fls)){
-    ##i <- 1 ## debug
+    ##i <- 14 ## debug
     t <- readLines(paste0(per, "/", fls[i], ".txt")) ## make path to file
     t <- gsub(" ", "", t)
     t <- gsub("[ ]{2}", " ", t)  ## drop double spaces
@@ -351,7 +356,7 @@ for (i in 1:length(fls)){
     ##     sel.3 <- grep("secretari[oa]", t, ignore.case = TRUE)                         ## Secretario's interventions
     ##     sel.3 <- sel.3[which(sel.3 > sel.2)][1]                                       ## The first one after roll call
     ## }
-    ##sel.1; sel.2; sel.3 ## debug
+    sel.1; sel.2; sel.3 ## debug
     ##t[sel.3]
     ##
     if (length(sel.1[!is.na(sel.1)])==0 | length(sel.2[!is.na(sel.2)])==0 | length(sel.3[!is.na(sel.3)])==0) {
@@ -372,8 +377,8 @@ for (i in 1:length(fls)){
     ##if (length(sel.2[!is.na(sel.2)])>1 & length(sel.2[!is.na(sel.2)])==length(sel.3[!is.na(sel.3)])) {
     if (length(sel.2[!is.na(sel.2)])>1) {
         ##sel.4 <- paste(sel.2, sel.3, sep=":")
-        sel.fr <- c(sel.1, sel.2) ## will get all text between breaks, finding end of roll call too hard as secretario is not systematic
-        sel.to <- c(sel.2, sel.3)
+        sel.fr <- sel.2 ## will get all text between breaks, finding end of roll call too hard as secretario is not systematic
+        sel.to <- c(sel.2[-1], sel.3)
         t.sub <- vector() ## initialize empty vector
         for (j in 1:length(sel.fr)){
             #j <- 1 ## debug
