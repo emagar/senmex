@@ -197,8 +197,8 @@ for (i in 1:length(fls)){
     ##if (length(sel.2[!is.na(sel.2)])>1 & length(sel.2[!is.na(sel.2)])==length(sel.3[!is.na(sel.3)])) {
     if (length(sel.2[!is.na(sel.2)])>1) {
         ##sel.4 <- paste(sel.2, sel.3, sep=":")
-        sel.fr <- c(sel.1, sel.2) ## will get all text between breaks, finding end of roll call too hard as secretario is not systematic
-        sel.to <- c(sel.2, sel.3)
+        sel.fr <- sel.2 ## will get all text between breaks, finding end of roll call too hard as secretario is not systematic
+        sel.to <- c(sel.2[-1], sel.3)
         t.sub <- vector() ## initialize empty vector
         for (j in 1:length(sel.fr)){
             #j <- 1 ## debug
@@ -410,5 +410,5 @@ length(all.v)
 
 ##
 ## save per.v for exploration
-write.csv(all.v, file = "all.csv", row.names = TRUE)
+write.csv(all.v, file = "all2.csv", row.names = TRUE)
 
