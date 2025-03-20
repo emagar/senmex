@@ -1,0 +1,49 @@
+Hi Jeff, I need to ask you about the status of roll call vote data for the Mexican Senate. 
+
+I'm participating in a conference panel honoring Cantú in Houston next week. I could again summarize his 1988 APSR article. But I might also systematize and make public data that Francisco sent me years ago, when he was still a student at UCSD.
+
+I do not recall the exact context. He was enquiring about Senate roll call votes, and I remember mentioning that the upper chamber didn't publicize its votes like the chamber did. He said some time later that he had found a bunch of roll call votes in the Senate diario, and sent me the web transcripts. 
+
+I believe that Francisco never systematized the data, because in his UCSD papers he worked with the chamber only. 
+
+Considering the Legistature-year, the diario frequencies he sent me look thus:
+
+59-2 N=98   (Feb-Apr 2005)
+59-3 N=265  (Sep-Dec 2005 and Feb-Apr 2006)
+60-1 N=136  (Sep-Dec 2006 and Feb-Apr 2007)
+60-2 N=2    (Sep-Oct 2007)
+61-2 N=136  (Sep-Dec 2010 and Feb-Apr 2011)
+
+Most diario entires include a single roll call vote, but several have more. There appear to be 700+ votes in total from my exploration.
+
+Does it make sense to clean all this and make the data public? Finalizing involves a good deal of work.
+
+
+
+Feb-Apr 2005  59-2
+Jun-Jul 2005  59-2
+
+Sep-Dec 2005  59-3
+Feb-Apr 2006  59-3
+
+Sep-Dec 2006  60-1
+Feb-Apr 2007  60-1
+
+Sep-Oct 2007  60-2
+
+Sep-Dec 2010  61-2
+Feb-Apr 2011  61-2
+
+59-2 N=98
+59-3 N=265
+60-1 N=136
+60-2 N=2
+61-2 N=136
+
+
+59 2003-06
+60 2006-09
+61 2009-12
+62 2012-15
+63 2015-18
+
