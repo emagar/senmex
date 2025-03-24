@@ -48,6 +48,7 @@ head(sendat)
 votdat <- raw.long[raw.long$info=="record",]
 votdat$info <- NULL
 votdat$txt <- NULL
+votdat[1,]
 dim(votdat)
 
 ## prep object that will receive roll call votes
@@ -58,7 +59,7 @@ rc <- as.data.frame(rc)
 raw$dhit <- 0 ## will record that vote was taken
 ##
 for (n in votdat$n) {
-    ##n <- 375 ## debug
+    ##n <- 666 ## debug
     one.v <- raw[which(raw$n==n),] ## subset one roll call vote
     for (s in 1:nrow(sendat)) {
         ##s <- 1 ## debug
@@ -71,8 +72,8 @@ for (n in votdat$n) {
         if (length(sel.r)>1) {
             one.v$dhit[sel.r] <- 2 ## indicate hit
         }
-    one.v -> raw[which(raw$n==n),] ## return manip
     }
+    one.v -> raw[which(raw$n==n),] ## return manip
 }
 
 ## Recode
@@ -82,21 +83,32 @@ rc[rc=="SI"]         <-  1
 ## To numeric
 rc <- data.frame(apply(rc, 2, function(x) as.numeric(x)))
 
-## ## check errors
-## rc[1,]
-## table(raw$dhit)
-## table(one.v$dhit)
-## one.v[one.v$dhit==0,]
-## raw[raw$dhit==0,]
-## raw[raw$dhit==2,]
+## check errors
+rc[1,]
+table(raw$dhit)
+table(one.v$dhit)
+one.v[one.v$dhit==0,]
+raw[raw$dhit==0,]
+raw[raw$dhit==2,]
 
 ## clean
 ls()
 rm("n", "one.v", "s", "sel.r")
 
+## name rows and columns
+rc[,7]
+colnames(rc) <- sendat$id
+rownames(rc) <- votdat$n
+##rownames(rc) <- paste0("v", votdat$n)
+
+## vote aggregates
+table(
+    rc[1,]
+      )
+
 save.image(file = paste(workdir, "data/votes-for-web", "rc60-61.RData", sep="/") )
 # csv versions
 write.csv(sendat, file = paste(workdir, "data/votes-for-web", "sendat60-61.csv", sep="/"), row.names = FALSE)
 write.csv(votdat, file = paste(workdir, "data/votes-for-web", "votdat60-61.csv", sep="/"), row.names = FALSE)
-write.csv(rc,     file = paste(workdir, "data/votes-for-web", "rc60-61.csv",     sep="/"), row.names = FALSE)
+write.csv(rc,     file = paste(workdir, "data/votes-for-web", "rc60-61.csv",     sep="/"), row.names = TRUE)
 
