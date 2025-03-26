@@ -20,7 +20,7 @@ ord,edon,id,nom,patmat,birth,fm,part,postulo,eleccion,dsup,in1,out1,in2,repite,n
 19,4,cam1p,MARIA MARTINA,KANTUN CAN,1964,f,morena,pvem.pt.morena,mayoria relativa,0,20240829,,,,
 20,4,cam1s,IXCHEL VICTORIA,PAT CAAMAL,,f,,pvem.pt.morena,mayoria relativa,1,,,,,
 21,4,cam2p,ANIBAL,OSTOA ORTEGA,1949,m,morena,pvem.pt.morena,mayoria relativa,0,20240829,20241015,20241018,64s-65s-66s-67s,
-22,4,cam2s,CARLOS ENRIQUE,MARTINEZ AKE,,m,,pvem.pt.morena,mayoria relativa,1,,,,,
+22,4,cam2s,CARLOS ENRIQUE,MARTINEZ AKE,1977,m,morena,pvem.pt.morena,mayoria relativa,1,20241015,,,,
 23,4,cam3p,.,.,,.,mc,mc,primera minoria,0,,,,,
 24,4,cam3s,FRANCISCO DANIEL,BARREDA PAVON,1977,m,mc,mc,primera minoria,1,20240829,,,,
 25,5,coa1p,LUIS FERNANDO,SALAZAR FERNANDEZ,1977,m,morena,pvem.pt.morena,mayoria relativa,0,20240829,,,,

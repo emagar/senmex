@@ -4,8 +4,14 @@ rm(list = ls())
 workdir <- c("~/Dropbox/data/rollcall/senMex")
 setwd(workdir)
 
-## # if only loading saved data
-## load(file=paste(workdir, "data/votesForWeb", "rc60-61.RData", sep="/"))
+## Handy functions
+pth <- ifelse (Sys.info()["user"] %in% c("eric", "magar"),
+    "~/Dropbox/data/useful-functions",
+    "https://raw.githubusercontent.com/emagar/useful-functions/master"
+    )
+source( paste(pth, "moveme.r", sep = "/") )
+source( paste(pth, "notin.r", sep = "/") )
+rm(pth)
 
 ## READ csv export with Cantú's Diario information (cleaned separately in excel)
 raw.long <- read.csv("data/raw/all.work.csv")
@@ -46,49 +52,47 @@ head(sendat)
 
 ## Included votes
 votdat <- raw.long[raw.long$info=="record",]
-votdat$info <- NULL
-votdat$txt <- NULL
-votdat[1,]
+votdat <- within(votdat, info <- txt <- sen <- pty <- vot <- NULL) # clean
 dim(votdat)
 
 ## prep object that will receive roll call votes
 rc <- matrix(NA, nrow = nrow(votdat), ncol = nrow(sendat))
 rc <- as.data.frame(rc)
+colnames(rc) <- sendat$id
 
 ## allocate votes into rc
 raw$dhit <- 0 ## will record that vote was taken
 ##
-for (n in votdat$n) {
+for (n in votdat$vid) {
     ##n <- 666 ## debug
-    one.v <- raw[which(raw$n==n),] ## subset one roll call vote
+    one.v <- raw[which(raw$vid==n),] ## subset one roll call vote
     for (s in 1:nrow(sendat)) {
         ##s <- 1 ## debug
         sel.r <- which(one.v$sen==sendat$nom[s])
         ##sel.r <- grep(sendat$nomregexp[s], one.v$sen)
         if (length(sel.r)==1) {
-            rc[grep(n, votdat$n),s] <- one.v$vot[sel.r] ## locates n in votdat's rows (important when n does not correspond to rownums)
+            rc[which(votdat$vid==n),s] <- one.v$vot[sel.r] ## locates n in votdat's rows (important when n does not correspond to rownums)
             one.v$dhit[sel.r] <- 1 ## indicate hit
         }
         if (length(sel.r)>1) {
             one.v$dhit[sel.r] <- 2 ## indicate hit
         }
     }
-    one.v -> raw[which(raw$n==n),] ## return manip
+    one.v -> raw[which(raw$vid==n),] ## return manip
 }
 
 ## Recode
-rc[rc=="NO"]         <- -1
-rc[rc=="ABSTENCION"] <-  0
-rc[rc=="SI"]         <-  1
+rc[rc=="NO" | rc=="No"] <- -1
+rc[rc=="ABSTENCION"]    <-  0
+rc[rc=="SI" | rc=="Si"] <-  1
 ## To numeric
 rc <- data.frame(apply(rc, 2, function(x) as.numeric(x)))
 
-## check errors
+## check output
 rc[1,]
-table(raw$dhit)
+table(raw$dhit) ## all should get 1
 table(one.v$dhit)
 one.v[one.v$dhit==0,]
-raw[raw$dhit==0,]
 raw[raw$dhit==2,]
 
 ## clean
@@ -98,17 +102,22 @@ rm("n", "one.v", "s", "sel.r")
 ## name rows and columns
 rc[,7]
 colnames(rc) <- sendat$id
-rownames(rc) <- votdat$n
-##rownames(rc) <- paste0("v", votdat$n)
+rownames(rc) <- votdat$vid
+##rownames(rc) <- paste0("v", votdat$vid)
 
 ## vote aggregates
-table(
-    rc[1,]
-      )
+votdat$ayes <- rowSums(rc==1,  na.rm = TRUE)
+votdat$nays <- rowSums(rc==-1, na.rm = TRUE)
+votdat$abst <- rowSums(rc==0,  na.rm = TRUE)
+votdat[1,]
+votdat <- votdat[, moveme(names(votdat), "leg first; tit last")]  # move columns
 
 save.image(file = paste(workdir, "data/votes-for-web", "rc60-61.RData", sep="/") )
 # csv versions
 write.csv(sendat, file = paste(workdir, "data/votes-for-web", "sendat60-61.csv", sep="/"), row.names = FALSE)
 write.csv(votdat, file = paste(workdir, "data/votes-for-web", "votdat60-61.csv", sep="/"), row.names = FALSE)
 write.csv(rc,     file = paste(workdir, "data/votes-for-web", "rc60-61.csv",     sep="/"), row.names = TRUE)
+
+# if only loading saved data
+load(file=paste(workdir, "data/votesForWeb", "rc60-61.RData", sep="/"))
 
