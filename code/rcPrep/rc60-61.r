@@ -111,6 +111,10 @@ votdat$nays <- rowSums(rc==-1, na.rm = TRUE)
 votdat$abst <- rowSums(rc==0,  na.rm = TRUE)
 votdat[1,]
 votdat <- votdat[, moveme(names(votdat), "leg first; tit last")]  # move columns
+## generate new vid (numeric vid along with file name---easier to spot if sequential number changes from one file to next in pre-R stages)
+tmp <- paste(votdat$vid, votdat$file, sep = "-")
+tmp <- sub(".html", "", tmp) ## drop .htlm trailer
+votdat$vid <- tmp
 
 save.image(file = paste(workdir, "data/votes-for-web", "rc60-61.RData", sep="/") )
 # csv versions

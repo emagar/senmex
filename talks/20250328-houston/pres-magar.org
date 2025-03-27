@@ -1,22 +1,24 @@
 #+STARTUP: showall
-#+TITLE:     In remebrance of Francisco Cantú
+#+TITLE:     In remembrance of Francisco Cantú
 #+AUTHOR:    Eric Magar
 #+EMAIL:     emagar@itam.mx
-#+DATE:      28-3-2025
+#+DATE:      28-3-2025 \newline Univ. of Houston
 #+ADDRESS:   Univ. of Houston
 #+OPTIONS:   H:2 num:t toc:f \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
 #+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:https://orgmode.org/org-info.js
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
-#+LANGUAGE:  es
+#+LANGUAGE:  en
 
 #+STARTUP: beamer
 #+LaTeX_CLASS: beamer
 #+LaTeX_CLASS_OPTIONS: [bigger]
 
-#+BEAMER_THEME: Rochester [height=20pt]
-#+BEAMER_COLOR_THEME: wolverine
+#+BEAMER_THEME: Pittsburgh
+#+BEAMER_COLOR_THEME: dove
+# #+BEAMER_THEME: Rochester [height=20pt]
+# #+BEAMER_COLOR_THEME: wolverine
 
 # setting this to 2 uses one star as sections two stars as new slide
 #+BEAMER_FRAME_LEVEL: 2
@@ -54,7 +56,7 @@
 \setbeamercovered{transparent}
 
 * Pubs
-** Jugador de equipo
+** Team player
 *** a column
   :PROPERTIES:
   :BEAMER_col: 0.5
