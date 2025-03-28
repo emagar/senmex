@@ -56,6 +56,8 @@
 \setbeamercovered{transparent}
 
 * The colleague
+# ** The colleague
+# \includegraphics[width=\textwidth]{./pics/cantu-pics/AIB_5906.jpg}
 ** Team player
 ***                                                         :B_ignoreheading:
     :PROPERTIES:
