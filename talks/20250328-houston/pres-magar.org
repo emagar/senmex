@@ -1,8 +1,8 @@
 #+STARTUP: showall
 #+TITLE:     Data in memory of Francisco Cantú
-#+AUTHOR:    Eric Magar
+#+AUTHOR:    Eric Magar \newline ITAM
 #+EMAIL:     emagar@itam.mx
-#+DATE:      28-3-2025 \newline Univ. of Houston
+#+DATE:      March 28th, 2025 \newline Univ. of Houston
 #+ADDRESS:   Univ. of Houston
 #+OPTIONS:   H:2 num:t toc:f \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
@@ -56,8 +56,17 @@
 \setbeamercovered{transparent}
 
 * The colleague
-# ** The colleague
-# \includegraphics[width=\textwidth]{./pics/cantu-pics/AIB_5906.jpg}
+** The colleague
+**** a column
+  :PROPERTIES:
+  :BEAMER_col: 0.5
+  :END:
+\includegraphics[width=\textwidth]{../../cantu-pics/cantu-y-lucero.jpeg}
+**** a column
+  :PROPERTIES:
+  :BEAMER_col: 0.5
+  :END:
+\includegraphics[width=.75\textwidth]{../../cantu-pics/cantu-y-sol.jpeg}
 ** Team player
 ***                                                         :B_ignoreheading:
     :PROPERTIES:
@@ -324,6 +333,9 @@ https://github.com/emagar/senmex
 ** .
 \centering 
 Thank you *Francisco*!
+
+emagar@itam.mx
+
 # * Mi presentación
 # ** 1988 No title
 #     :PROPERTIES:
