@@ -1,5 +1,5 @@
 #+STARTUP: showall
-#+TITLE:     In remembrance of Francisco Cantú
+#+TITLE:     Data in memory of Francisco Cantú
 #+AUTHOR:    Eric Magar
 #+EMAIL:     emagar@itam.mx
 #+DATE:      28-3-2025 \newline Univ. of Houston
@@ -55,7 +55,7 @@
 
 \setbeamercovered{transparent}
 
-* Pubs
+* The colleague
 ** Team player
 ***                                                         :B_ignoreheading:
     :PROPERTIES:
@@ -138,7 +138,7 @@
     :PROPERTIES:
     :BEAMER_env: block
     :END:      
-    \includegraphics[width=\textwidth]{./pics/pubs3.png}
+    \includegraphics[width=\textwidth]{./pics/pubs3s.png}
 # *** Fraude, integridad electoral
 #  - Identifying Electoral Irregularities in Mexican Local Elections /AJPS/ 2014
 #  - The Fingerprints of Fraud: Evidence from Mexico's 1988 Presidential Election /APSR/ 2019
@@ -202,67 +202,115 @@
 # The Rise of Federal Politics in Mexico’s Legislative Branch. Journal of Politics in Latin America, Vol. 19, No. 4: 3-38, 2012 (with Scott Desposato)
 # Fraudulent Democracy? An Analysis of Argentina’s Infamous Decade using Supervised Machine Learning. Political Analysis, Vol. 19, No. 4: 409-433, 2011 (with Sebastián Saiegh)
 * Senate roll call votes 
-** @ back burner since 2014
-- Francisco sought to remedy asymmetric approach to Mexican Congress
+** In the back burner since 2014
+- Asymmetric approach to Mexican Congress \newline \rightarrow Francisco sought to remedy
 - But: Senate doesn't publish pre-digested roll call votes
 - Sent me a collection scraped from Senate web page \pause
 *** Labor intensive
 - Messy web concièrges
 - Agreed we'd deal with this later
 ** Problems
+*** Unsystematic
 - In period covered, roll call vote appear in 3 dift ways
 - Member names often scrambled
 - Many repeats  \pause
-*** What I've done
+*** What I've done (just a start)
 1. /Beautiful soup/ to de-HTMLize
 2. Full senator names, with substitutes
-3. Then regular expressions in search of patterns
+3. Coded regular expressions in search of patterns
 4. Trial-and-error
-** What there is
+** What surfaced
 - Francisco sent 637 digital issues of /Diario de sesiones/ 
-- Each includes debate and 1+ roll call vote   \pause
-- Produced 724 votes
-| Session |   N |
-|---------+-----|
-| Spr.'05 | 101 |
-| Fall'05 | 118 |
-| Spr.'06 | 154 |
-| Fall'06 |  47 |
-| Spr.'07 | 104 |
-| Fall'07 |  17 |
-| Fall'10 |  73 |
-| Spr.'11 | 110 |
+- Each records debate, floor proceedings, and 1+ roll call vote   \pause
+- Produced 724 votes in the dataset
+|      <r> | <r> |
+|  Session |   N |
+|----------+-----|
+| Spr. '05 | 101 |
+| Fall '05 | 118 |
+| Spr. '06 | 154 |
+| Fall '06 |  47 |
+| Spr. '07 | 104 |
+| Fall '07 |  17 |
+| Fall '10 |  73 |
+| Spr. '11 | 110 |
 ** Against bill universe
-| Session          | Cantú | Weldon |
-|------------------+-------+--------|
-| *59th Leg.*      |       |        |
-| Fall'03          |       |    109 |
-| Spr.'04          |       |     64 |
-| Fall'04          |       |     98 |
-| Spr.'05          |   101 |    108 |
-| Fall'05          |   118 |    130 |
-| Spr.'06          |   154 |    157 |
-|------------------+-------+--------|
-| *60th Leg.*      |       |        |
-| Fall'06          |    47 |     63 |
-| Spr.'07          |   104 |    108 |
-| Fall'07          |    17 |    177 |
-| Spr.'08          |       |    109 |
-| Fall'08          |       |    132 |
-| Spr.'09          |       |    129 |
+***                                                         :B_ignoreheading:
+    :PROPERTIES:
+    :BEAMER_env: ignoreheading
+    :END:
+| Session     | Cantú | Weldon |   dif |
+|-------------+-------+--------+-------|
+| *59th Leg.* |       |        |       |
+| Fall'03     |       |    109 |       |
+| Spr.'04     |       |     64 |       |
+| Fall'04     |       |     98 |       |
+| Spr.'05     |   101 |    108 |   --7 |
+| Fall'05     |   118 |    130 |  --12 |
+| Spr.'06     |   154 |    157 |   --3 |
+|-------------+-------+--------+-------|
+| *60th Leg.* |       |        |       |
+| Fall'06     |    47 |     63 |  --16 |
+| Spr.'07     |   104 |    108 |   --4 |
+| Fall'07     |    17 |    177 | --160 |
+| Spr.'08     |       |    109 |       |
+| Fall'08     |       |    132 |       |
+| Spr.'09     |       |    129 |       |
 ** Rice cohesion scores
-| Party | 2005--06 | 2006--11 |
-| PAN   |      .96 |      .98 |
-| PRI   |      .98 |      .99 |
-| PRD   |      .96 |      .92 |
+\centering
+$C_{pv} = \frac{\left|\text{ayes}_{pv} - \text{nays}_{pv}\right|}{\text{ayes}_{pv} + \text{nays}_{pv}}$
+\bigskip
+|       | $\bar{C}$ |          |
+| Party |  2005--06 | 2006--11 |
+|-------+-----------+----------|
+| PAN   |       .96 |      .98 |
+| PRI   |       .98 |      .99 |
+| Left   |       .96 |      .92 |
 ** Rice dissimilarity
-|         | 2005--06 | 2006--11 |
-| PAN-PRI |      .07 |      .06 |
-| PAN-PRD |      .10 |      .21 |
-| PRI-PRD |      .07 |      .18 |
+\centering
+$D_{pqv} = \left|\frac{\text{nays}_{pv}}{\text{ayes}_{pv} + \text{nays}_{pv}} - \frac{\text{nays}_{qv}}{\text{ayes}_{qv} + \text{nays}_{qv}}\right|$
+# $D_{pqv} = |\%\text{nays}_{pv} - \%\text{nays}_{qv}|$
+\bigskip
+|    <c>    |       <r> |      <r> |
+|           | $\bar{D}$ |          |
+|           |  2005--06 | 2006--11 |
+|-----------+-----------+----------|
+| PAN--PRI  |       .07 |    *.06* |
+| PAN--Left |       .10 |    *.21* |
+| PRI--Left |       .07 |    *.18* |
+|           |           |          |
 * Public repository
-** Distributed here
+** Public repository 
+***                                                         :B_ignoreheading:
+    :PROPERTIES:
+    :BEAMER_env: ignoreheading
+    :END:
 https://github.com/emagar/senmex
+\bigskip \pause
+*** Files:
+****                                                               :B_column:
+     :PROPERTIES:
+     :BEAMER_env: column
+     :BEAMER_col: 0.5
+     :END:
+  - ~votdat58.59.csv~ ($V$)
+  - ~sendat58.59.csv~ ($S$)
+  - ~rc58.59.csv~  ($V \times S$)
+****                                                               :B_column:
+     :PROPERTIES:
+     :BEAMER_env: column
+     :BEAMER_col: 0.5
+     :END:
+  - ~votdat60.61.csv~
+  - ~sendat60.61.csv~
+  - ~rc60.61.csv~ \pause \bigskip
+*** More work needed... crowdsourcing? 
+  - Missing votes in period
+  - Extend coverage 1997--2025  
+  - Scale senator's ideal points
+** .
+\centering 
+Thank you *Francisco*!
 # * Mi presentación
 # ** 1988 No title
 #     :PROPERTIES:

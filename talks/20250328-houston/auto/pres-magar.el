@@ -35,7 +35,8 @@
     "mathtools"
     "transparent")
    (LaTeX-add-labels
-    "sec:org2fa59ec"
-    "sec:org3619f01"))
+    "sec:org5985dd6"
+    "sec:orgf5ad7d8"
+    "sec:orgda388ab"))
  :latex)
 

@@ -1,4 +1,4 @@
-% Created 2025-03-27 Thu 22:19
+% Created 2025-03-28 Fri 10:27
 % Intended LaTeX compiler: pdflatex
 \documentclass[bigger]{beamer}
 \usepackage[utf8]{inputenc}
@@ -24,7 +24,7 @@
 \usecolortheme{dove}
 \author{Eric Magar}
 \date{28-3-2025 \newline Univ. of Houston}
-\title{In remembrance of Francisco Cantú}
+\title{Data in memory of Francisco Cantú}
 \setbeamertemplate{footline}[frame number]{}
 \setbeamertemplate{navigation symbols}{}
 \expandafter\def\expandafter\insertshorttitle\expandafter{%
@@ -33,7 +33,7 @@
 %  \insertframenumber\,/\,\inserttotalframenumber}
 \hypersetup{
  pdfauthor={Eric Magar},
- pdftitle={In remembrance of Francisco Cantú},
+ pdftitle={Data in memory of Francisco Cantú},
  pdfkeywords={},
  pdfsubject={},
  pdfcreator={Emacs 27.1 (Org mode 9.3)}, 
@@ -47,9 +47,9 @@
 
 \setbeamercovered{transparent}
 
-\section{Pubs}
-\label{sec:org2fa59ec}
-\begin{frame}[label={sec:org3be2205}]{Team player}
+\section{The colleague}
+\label{sec:org5985dd6}
+\begin{frame}[label={sec:orge1ce1e1}]{Team player}
 \begin{columns}
 \begin{column}{0.5\columnwidth}
 \begin{scriptsize}
@@ -93,7 +93,7 @@
 \end{column}
 \end{columns}
 \end{frame}
-\begin{frame}[label={sec:org5e1ff4a}]{Three strands}
+\begin{frame}[label={sec:org0d6b7a9}]{Three strands}
 \begin{block}{Fraud, election integrity}
 \includegraphics[width=\textwidth]{./pics/pubs1.png}
 \end{block}
@@ -104,7 +104,7 @@
 \includegraphics[width=\textwidth]{./pics/pubs3.png}
 \end{block}
 \end{frame}
-\begin{frame}[label={sec:orga8b8a1f}]{Three strands}
+\begin{frame}[label={sec:orge2851b7}]{Three strands}
 \begin{block}{Fraud, election integrity}
 \transparent{0.3}\includegraphics[width=\textwidth]{./pics/pubs1.png}
 \end{block}
@@ -112,14 +112,14 @@
 \transparent{0.3}\includegraphics[width=\textwidth]{./pics/pubs2.png}
 \end{block}
 \begin{block}{Legislative studies, roll call votes}
-\includegraphics[width=\textwidth]{./pics/pubs3.png}
+\includegraphics[width=\textwidth]{./pics/pubs3s.png}
 \end{block}
 \end{frame}
 \section{Senate roll call votes}
-\label{sec:org3619f01}
-\begin{frame}[label={sec:org115604a}]{@ back burner since 2014}
+\label{sec:orgf5ad7d8}
+\begin{frame}[label={sec:org06f19ad}]{In the back burner since 2014}
 \begin{itemize}
-\item Francisco sought to remedy asymmetric approach to Mexican Congress
+\item Asymmetric approach to Mexican Congress \newline \(\rightarrow\) Francisco sought to remedy
 \item But: Senate doesn't publish pre-digested roll call votes
 \item Sent me a collection scraped from Senate web page \pause
 \end{itemize}
@@ -130,83 +130,132 @@
 \end{itemize}
 \end{block}
 \end{frame}
-\begin{frame}[label={sec:orgae5f13c}]{Problems}
+\begin{frame}[label={sec:orga8db9b7}]{Problems}
+\begin{block}{Unsystematic}
 \begin{itemize}
 \item In period covered, roll call vote appear in 3 dift ways
 \item Member names often scrambled
 \item Many repeats  \pause
 \end{itemize}
-\begin{block}{What I've done}
+\end{block}
+\begin{block}{What I've done (just a start)}
 \begin{enumerate}
 \item \emph{Beautiful soup} to de-HTMLize
 \item Full senator names, with substitutes
-\item Then regular expressions in search of patterns
+\item Coded regular expressions in search of patterns
 \item Trial-and-error
 \end{enumerate}
 \end{block}
 \end{frame}
-\begin{frame}[label={sec:org8cf5652}]{What there is}
+\begin{frame}[label={sec:org1eff8ba}]{What surfaced}
 \begin{itemize}
 \item Francisco sent 637 digital issues of \emph{Diario de sesiones}
-\item Each includes debate and 1+ roll call vote   \pause
-\item Produced 724 votes
+\item Each records debate, floor proceedings, and 1+ roll call vote   \pause
+\item Produced 724 votes in the dataset
 \end{itemize}
 \begin{center}
-\begin{tabular}{lr}
+\begin{tabular}{rr}
 Session & N\\
 \hline
-Spr.'05 & 101\\
-Fall'05 & 118\\
-Spr.'06 & 154\\
-Fall'06 & 47\\
-Spr.'07 & 104\\
-Fall'07 & 17\\
-Fall'10 & 73\\
-Spr.'11 & 110\\
+Spr. '05 & 101\\
+Fall '05 & 118\\
+Spr. '06 & 154\\
+Fall '06 & 47\\
+Spr. '07 & 104\\
+Fall '07 & 17\\
+Fall '10 & 73\\
+Spr. '11 & 110\\
 \end{tabular}
 \end{center}
 \end{frame}
-\begin{frame}[label={sec:org78a817c}]{Against bill universe}
+\begin{frame}[label={sec:org76f6359}]{Against bill universe}
 \begin{center}
-\begin{tabular}{lrr}
-Session & Cantú & Weldon\\
+\begin{tabular}{lrrr}
+Session & Cantú & Weldon & dif\\
 \hline
-\alert{59th Leg.} &  & \\
-Fall'03 &  & 109\\
-Spr.'04 &  & 64\\
-Fall'04 &  & 98\\
-Spr.'05 & 101 & 108\\
-Fall'05 & 118 & 130\\
-Spr.'06 & 154 & 157\\
+\alert{59th Leg.} &  &  & \\
+Fall'03 &  & 109 & \\
+Spr.'04 &  & 64 & \\
+Fall'04 &  & 98 & \\
+Spr.'05 & 101 & 108 & --7\\
+Fall'05 & 118 & 130 & --12\\
+Spr.'06 & 154 & 157 & --3\\
 \hline
-\alert{60th Leg.} &  & \\
-Fall'06 & 47 & 63\\
-Spr.'07 & 104 & 108\\
-Fall'07 & 17 & 177\\
-Spr.'08 &  & 109\\
-Fall'08 &  & 132\\
-Spr.'09 &  & 129\\
+\alert{60th Leg.} &  &  & \\
+Fall'06 & 47 & 63 & --16\\
+Spr.'07 & 104 & 108 & --4\\
+Fall'07 & 17 & 177 & --160\\
+Spr.'08 &  & 109 & \\
+Fall'08 &  & 132 & \\
+Spr.'09 &  & 129 & \\
 \end{tabular}
 \end{center}
 \end{frame}
-\begin{frame}[label={sec:orga47a76d}]{Rice cohesion scores}
+\begin{frame}[label={sec:org5d1ea20}]{Rice cohesion scores}
+\centering
+\(C_{pv} = \frac{\left|\text{ayes}_{pv} - \text{nays}_{pv}\right|}{\text{ayes}_{pv} + \text{nays}_{pv}}\)
+\bigskip
 \begin{center}
 \begin{tabular}{lrr}
+ & \(\bar{C}\) & \\
 Party & 2005--06 & 2006--11\\
+\hline
 PAN & .96 & .98\\
 PRI & .98 & .99\\
-PRD & .96 & .92\\
+Left & .96 & .92\\
 \end{tabular}
 \end{center}
 \end{frame}
-\begin{frame}[label={sec:org46b75cf}]{Rice dissimilarity}
+\begin{frame}[label={sec:orgf0c4e09}]{Rice dissimilarity}
+\centering
+\(D_{pqv} = \left|\frac{\text{nays}_{pv}}{\text{ayes}_{pv} + \text{nays}_{pv}} - \frac{\text{nays}_{qv}}{\text{ayes}_{qv} + \text{nays}_{qv}}\right|\)
+
+\bigskip
 \begin{center}
-\begin{tabular}{lrr}
+\begin{tabular}{crr}
+ & \(\bar{D}\) & \\
  & 2005--06 & 2006--11\\
-PAN-PRI & .07 & .06\\
-PAN-PRD & .10 & .21\\
-PRI-PRD & .07 & .18\\
+\hline
+PAN--PRI & .07 & \alert{.06}\\
+PAN--Left & .10 & \alert{.21}\\
+PRI--Left & .07 & \alert{.18}\\
+ &  & \\
 \end{tabular}
 \end{center}
+\end{frame}
+\section{Public repository}
+\label{sec:orgda388ab}
+\begin{frame}[label={sec:orgffb7e92},fragile]{Public repository}
+ \url{https://github.com/emagar/senmex}
+\bigskip \pause
+\begin{block}{Files:}
+\begin{columns}
+\begin{column}{0.5\columnwidth}
+\begin{itemize}
+\item \texttt{votdat58.59.csv} (\(V\))
+\item \texttt{sendat58.59.csv} (\(S\))
+\item \texttt{rc58.59.csv}  (\(V \times S\))
+\end{itemize}
+\end{column}
+\begin{column}{0.5\columnwidth}
+\begin{itemize}
+\item \texttt{votdat60.61.csv}
+\item \texttt{sendat60.61.csv}
+\item \texttt{rc60.61.csv} \pause \bigskip
+\end{itemize}
+\end{column}
+\end{columns}
+\end{block}
+\begin{block}{More work needed\ldots{} crowdsourcing?}
+\begin{itemize}
+\item Missing votes in period
+\item Extend coverage 1997--2025
+\item Scale senator's ideal points
+\end{itemize}
+\end{block}
+\end{frame}
+\begin{frame}[label={sec:orge48c7a1}]{.}
+\centering 
+Thank you \alert{Francisco}!
 \end{frame}
 \end{document}
