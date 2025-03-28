@@ -1,6 +1,6 @@
 #+TITLE: Roll call votes in the Mexican Senate data
 #+AUTHOR: Francisco Cantú and Eric Magar
-Last revision: 2025-03-27
+Last revision: 2025-03-28
 Report inconsistencies to emagar at gmail dot com.
 
 ----------
