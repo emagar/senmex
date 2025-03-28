@@ -24,7 +24,7 @@ The repository contains roll call data for recent Senates of the Mexican Congres
 
 * Francisco Cantú
 
-[[./pics/cantu-pics/AIB_5906.jpg]]
+[[./cantu-pics/AIB_5906.jpg]]
 
 The repository honors the memory of my colleague and friend Francisco Cantú, who passed away on August 17, 2023. Francisco was a 
 [[https://www.cambridge.org/core/journals/political-science-today/article/in-memoriam-francisco-cantu/7E57FEBCB15FDFEC437654A4C95F48DE][leading scholar]]
