@@ -124,5 +124,7 @@ write.csv(votdat, file = paste(workdir, "data/votes-for-web", "votdat58-59.csv",
 write.csv(rc,     file = paste(workdir, "data/votes-for-web", "rc58-59.csv",     sep="/"), row.names = TRUE)
 
 ## load this if only loading data saved above
+workdir <- c("~/Dropbox/data/rollcall/senMex")
+setwd(workdir)
 load(file=paste(workdir, "data/votes-for-web", "rc58-59.RData", sep="/"))
 

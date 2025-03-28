@@ -57,73 +57,88 @@
 
 * Pubs
 ** Team player
-*** a column
+***                                                         :B_ignoreheading:
+    :PROPERTIES:
+    :BEAMER_env: ignoreheading
+    :BEAMER_opt: footnotesize
+    :END:
+**** a column
   :PROPERTIES:
   :BEAMER_col: 0.5
   :END:
-- Susan Achury
-- Leonardo Antenangeli
-- Natalia Aruguete
-- Ernesto Calvo
-- Scott Clifford
-- Scott Desposato (x2)
-- Cengiz Erisen
-- Jorge Fernandes
-- Omar García Ponce
-- Agustina Haime
-- Victor Hernández Huerta
-- Verónica Hoyo (x2)
-- Paul Johnson
-- Sandra Ley (x2)
-*** a column
+# \resizebox{.9\textheight}{!}{
+\begin{scriptsize}
+\begin{itemize}
+  \item Susan Achury
+  \item Leonardo Antenangeli
+  \item Natalia Aruguete
+  \item Ernesto Calvo
+  \item Scott Clifford
+  \item Scott Desposato (x2)
+  \item Cengiz Erisen
+  \item Jorge Fernandes
+  \item Omar García Ponce
+  \item Agustina Haime
+  \item Victor Hernández Huerta
+  \item Verónica Hoyo (x2)
+  \item Paul Johnson
+  \item Sandra Ley (x2)
+\end{itemize}
+\end{footnotesize}
+**** a column
   :PROPERTIES:
   :BEAMER_col: 0.5
   :END:
-- Eric Magar
-- Marco Morales
-- Javier Márquez
-- Margarita Ramírez
-- Pedro Riera (x3) 
-- Sebastián Saiegh
-- Carlos Scartascini
-- Leslie Schwindt-Bayer
-- Robert Stein et al. (x2)
-- Michelle Torres
-- Agustín Vallejo
-- Tiago Ventura
-- Dane Wendell
-** Tres vetas
-*** Fraude, integridad electoral
+\begin{scriptsize}
+\begin{itemize}
+  \item Eric Magar
+  \item Marco Morales
+  \item Javier Márquez
+  \item Margarita Ramírez
+  \item Pedro Riera (x3) 
+  \item Sebastián Saiegh
+  \item Carlos Scartascini
+  \item Leslie Schwindt-Bayer
+  \item Robert Stein et al. (x2)
+  \item Michelle Torres
+  \item Agustín Vallejo
+  \item Tiago Ventura
+  \item Dane Wendell
+  \item ...
+\end{itemize}
+\end{footnotesize}
+** Three strands
+*** Fraud, election integrity
     :PROPERTIES:
     :BEAMER_env: block
     :END:      
     \includegraphics[width=\textwidth]{./pics/pubs1.png}
-*** Votos, compra-venta
+*** Voting, vote trading
     :PROPERTIES:
     :BEAMER_env: block
     :END:      
     \includegraphics[width=\textwidth]{./pics/pubs2.png}
-*** Estudios legislativos
+*** Legislative studies, roll call votes
     :PROPERTIES:
     :BEAMER_env: block
     :END:      
     \includegraphics[width=\textwidth]{./pics/pubs3.png}
-** Tres vetas
-*** Fraude, integridad electoral
+** Three strands
+*** Fraud, election integrity
     :PROPERTIES:
     :BEAMER_env: block
     :END:      
-    \includegraphics[width=\textwidth]{./pics/pubs1s.png}
-*** Votos, compra-venta
+    \transparent{0.3}\includegraphics[width=\textwidth]{./pics/pubs1.png}
+*** Voting, vote trading
     :PROPERTIES:
     :BEAMER_env: block
     :END:      
     \transparent{0.3}\includegraphics[width=\textwidth]{./pics/pubs2.png}
-*** Estudios legislativos
+*** Legislative studies, roll call votes
     :PROPERTIES:
     :BEAMER_env: block
     :END:      
-    \transparent{0.3}\includegraphics[width=\textwidth]{./pics/pubs3.png}
+    \includegraphics[width=\textwidth]{./pics/pubs3.png}
 # *** Fraude, integridad electoral
 #  - Identifying Electoral Irregularities in Mexican Local Elections /AJPS/ 2014
 #  - The Fingerprints of Fraud: Evidence from Mexico's 1988 Presidential Election /APSR/ 2019
@@ -186,89 +201,150 @@
 # Methodological Considerations for Students of Mexican Legislative Politics: Selection Bias in Roll-Call Publications. Política y Gobierno, Vol. XXI, No. 1, 2014 (with Scott Desposato and Eric Magar)[English version]
 # The Rise of Federal Politics in Mexico’s Legislative Branch. Journal of Politics in Latin America, Vol. 19, No. 4: 3-38, 2012 (with Scott Desposato)
 # Fraudulent Democracy? An Analysis of Argentina’s Infamous Decade using Supervised Machine Learning. Political Analysis, Vol. 19, No. 4: 409-433, 2011 (with Sebastián Saiegh)
+* Senate roll call votes 
+** @ back burner since 2014
+- Francisco sought to remedy asymmetric approach to Mexican Congress
+- But: Senate doesn't publish pre-digested roll call votes
+- Sent me a collection scraped from Senate web page \pause
+*** Labor intensive
+- Messy web concièrges
+- Agreed we'd deal with this later
+** Problems
+- In period covered, roll call vote appear in 3 dift ways
+- Member names often scrambled
+- Many repeats  \pause
+*** What I've done
+1. /Beautiful soup/ to de-HTMLize
+2. Full senator names, with substitutes
+3. Then regular expressions in search of patterns
+4. Trial-and-error
+** What there is
+- Francisco sent 637 digital issues of /Diario de sesiones/ 
+- Each includes debate and 1+ roll call vote   \pause
+- Produced 724 votes
+| Session |   N |
+|---------+-----|
+| Spr.'05 | 101 |
+| Fall'05 | 118 |
+| Spr.'06 | 154 |
+| Fall'06 |  47 |
+| Spr.'07 | 104 |
+| Fall'07 |  17 |
+| Fall'10 |  73 |
+| Spr.'11 | 110 |
+** Against bill universe
+| Session          | Cantú | Weldon |
+|------------------+-------+--------|
+| *59th Leg.*      |       |        |
+| Fall'03          |       |    109 |
+| Spr.'04          |       |     64 |
+| Fall'04          |       |     98 |
+| Spr.'05          |   101 |    108 |
+| Fall'05          |   118 |    130 |
+| Spr.'06          |   154 |    157 |
+|------------------+-------+--------|
+| *60th Leg.*      |       |        |
+| Fall'06          |    47 |     63 |
+| Spr.'07          |   104 |    108 |
+| Fall'07          |    17 |    177 |
+| Spr.'08          |       |    109 |
+| Fall'08          |       |    132 |
+| Spr.'09          |       |    129 |
+** Rice cohesion scores
+| Party | 2005--06 | 2006--11 |
+| PAN   |      .96 |      .98 |
+| PRI   |      .98 |      .99 |
+| PRD   |      .96 |      .92 |
+** Rice dissimilarity
+|         | 2005--06 | 2006--11 |
+| PAN-PRI |      .07 |      .06 |
+| PAN-PRD |      .10 |      .21 |
+| PRI-PRD |      .07 |      .18 |
+* Public repository
+** Distributed here
+https://github.com/emagar/senmex
+# * Mi presentación
+# ** 1988 No title
+#     :PROPERTIES:
+#     :BEAMER_env: fullframe
+#     :END:      
+# \includegraphics[width=\textwidth]{./pics/csg-bartlett.png}
+# ** Aire fresco para una controversia añeja
+# *** bullets no title
+#     :PROPERTIES:
+#     :BEAMER_env: ignoreheading
+#     :END:      
+# - CFE reportó cómputos agregados de consejos distritales $$V = \sum_{d=1}^{300} v_d = 9.6M~~(50.3\%)$$
+# \pause
+# - 30 años sin evidencia sistemática \newline destrucción paquetes impide verificar si $$\sum_{casillas} v_c \stackrel{\text{?}}{=} V$$
+# ** Aire fresco para una controversia añeja
+# *** El argumento de Salinas
+#     :PROPERTIES:
+#     :BEAMER_env: block
+#     :END:      
+# 1. la suma de votos en actas le dan la victoria
+# 2. 100% de las actas disponibles en Lecumberri
+# \bigskip \pause
+# *** Data original
+#     :PROPERTIES:
+#     :BEAMER_env: block
+#     :END:      
+# - Fotos digitales de las actas de escrutinio ($N \approx 53k$)
+# - Análisis de (2) confirma que (1) es cierta \newline
+#   $\rightarrow$ descarta manipulación centralizada
+# - Pero también evidencia un *fraude de gran escala* y cómo se instrumentó
+# - /Convolutional neural networks/
 
-* Mi presentación
-** 1988 No title
-    :PROPERTIES:
-    :BEAMER_env: fullframe
-    :END:      
-\includegraphics[width=\textwidth]{./pics/csg-bartlett.png}
-** Aire fresco para una controversia añeja
-*** bullets no title
-    :PROPERTIES:
-    :BEAMER_env: ignoreheading
-    :END:      
-- CFE reportó cómputos agregados de consejos distritales $$V = \sum_{d=1}^{300} v_d = 9.6M~~(50.3\%)$$
-\pause
-- 30 años sin evidencia sistemática \newline destrucción paquetes impide verificar si $$\sum_{casillas} v_c \stackrel{\text{?}}{=} V$$
-** Aire fresco para una controversia añeja
-*** El argumento de Salinas
-    :PROPERTIES:
-    :BEAMER_env: block
-    :END:      
-1. la suma de votos en actas le dan la victoria
-2. 100% de las actas disponibles en Lecumberri
-\bigskip \pause
-*** Data original
-    :PROPERTIES:
-    :BEAMER_env: block
-    :END:      
-- Fotos digitales de las actas de escrutinio ($N \approx 53k$)
-- Análisis de (2) confirma que (1) es cierta \newline
-  $\rightarrow$ descarta manipulación centralizada
-- Pero también evidencia un *fraude de gran escala* y cómo se instrumentó
-- /Convolutional neural networks/
+# ** El procedimiento CNN
+# *** col con analogía
+#   :PROPERTIES:
+#   :BEAMER_col: 0.55
+#   :END:
+# Analogía: el nervio óptico \newline estímulo de cada región visual dispara una neurona específica (un pixel)
 
-** El procedimiento CNN
-*** col con analogía
-  :PROPERTIES:
-  :BEAMER_col: 0.55
-  :END:
-Analogía: el nervio óptico \newline estímulo de cada región visual dispara una neurona específica (un pixel)
+# \bigskip Entrenamiento para reconocer
+#   1. número fidedigno \includegraphics[width=.1\textwidth]{./pics/dos.png} \\
+#   2. alterados con malicia (rayaduras, superposición...)
+#   3. tachones bienintencionados
 
-\bigskip Entrenamiento para reconocer
-  1. número fidedigno \includegraphics[width=.1\textwidth]{./pics/dos.png} \\
-  2. alterados con malicia (rayaduras, superposición...)
-  3. tachones bienintencionados
+# \bigskip Sigue /machine learning/
+# *** col con fotos
+#   :PROPERTIES:
+#   :BEAMER_col: 0.45
+#   :END:
+#     \includegraphics[width=\columnwidth]{./pics/fig1-apsr.png}
+# ** Operaron los gobernadores
+#     \includegraphics[width=\textwidth]{./pics/mapa-apsr.png} \\
+#     \centering Tasa de error: falso positivo $\approx 0.07~~~$ falso negativo $\approx 0.15$
+# ** Casillas zapato
+# *** una columna con fig
+#   :PROPERTIES:
+#   :BEAMER_col: 0.5
+#   :END:
+#     \includegraphics[width=\columnwidth]{./pics/fig4-apsr.png} \\
+# *** una columna con fig
+#   :PROPERTIES:
+#   :BEAMER_col: 0.5
+#   :END:
+#     \includegraphics[width=\columnwidth]{./pics/fig5-apsr.png} \\
+# ** Correlates
+# #+begin_export latex
+#   \begin{tikzpicture}
+#   \node (0,0){\includegraphics[width=\textwidth]{./pics/reg-apsr.png}};
+#   \fill[draw,fill=none,red,thick] (-1.1,2.6) -- (-0.1,2.6) -- (-0.1,1.1) -- (-1.1,1.1) -- (-1.1,2.6);
+#   \end{tikzpicture}
+# #+end_export
+# ** Balance: el estudio sistemático del fraude
+# Análisis sistemático confirma
 
-\bigskip Sigue /machine learning/
-*** col con fotos
-  :PROPERTIES:
-  :BEAMER_col: 0.45
-  :END:
-    \includegraphics[width=\columnwidth]{./pics/fig1-apsr.png}
-** Operaron los gobernadores
-    \includegraphics[width=\textwidth]{./pics/mapa-apsr.png} \\
-    \centering Tasa de error: falso positivo $\approx 0.07~~~$ falso negativo $\approx 0.15$
-** Casillas zapato
-*** una columna con fig
-  :PROPERTIES:
-  :BEAMER_col: 0.5
-  :END:
-    \includegraphics[width=\columnwidth]{./pics/fig4-apsr.png} \\
-*** una columna con fig
-  :PROPERTIES:
-  :BEAMER_col: 0.5
-  :END:
-    \includegraphics[width=\columnwidth]{./pics/fig5-apsr.png} \\
-** Correlates
-#+begin_export latex
-  \begin{tikzpicture}
-  \node (0,0){\includegraphics[width=\textwidth]{./pics/reg-apsr.png}};
-  \fill[draw,fill=none,red,thick] (-1.1,2.6) -- (-0.1,2.6) -- (-0.1,1.1) -- (-1.1,1.1) -- (-1.1,2.6);
-  \end{tikzpicture}
-#+end_export
-** Balance: el estudio sistemático del fraude
-Análisis sistemático confirma
+# - /Caída del sistema/ no instrumentó un fraude centralizado desde Bucareli
+# - sí permitió alterar $\sim30\%$ actas previo al cómputo distrital, inflando voto Salinas
+# - Operación de fuerza bruta por gobernadores "talentosos"
+# - ¿CSG se robó la elección o sólo amplió el margen?
+# - Obsesión con el *fraude* \newline
+#   1997--2024 quizás matiza
 
-- /Caída del sistema/ no instrumentó un fraude centralizado desde Bucareli
-- sí permitió alterar $\sim30\%$ actas previo al cómputo distrital, inflando voto Salinas
-- Operación de fuerza bruta por gobernadores "talentosos"
-- ¿CSG se robó la elección o sólo amplió el margen?
-- Obsesión con el *fraude* \newline
-  1997--2024 quizás matiza
-
-\pause \bigskip \centering *¡Gracias Francisco!*
+# \pause \bigskip \centering *¡Gracias Francisco!*
 # - CNN clasifica las actas manipuladas, no manipuladas y dudosas
 # - Al concatenar los patrones detectados por los filtros con los de imágenes vecinas, el modelo adquiere la capacidad de detectar las formas  --- en este caso, los números 0 al 9, así como rayaduras, tachones, dígitos superpuestos, etc.
 # - Las analiza con Convolutional Neural Networks (Redes Neuronales Convolucionadas). Método para analizar imágenes mediante machine learning autónomo. Analogía es el nervio óptico con ojo inmóvil, donde un estímulo visual en cada región de visión (cada pixel) dispara una neurona específica y única. El modelo consiste en una imagen original (un acta digitalizada), una o más capas ocultas (las posibles alteraciones a la imagen original), y una imagen final (la sustracción de las capas ocultas de la imagen original).

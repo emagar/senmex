@@ -1,4 +1,4 @@
-% Created 2025-03-26 Wed 14:53
+% Created 2025-03-27 Thu 22:19
 % Intended LaTeX compiler: pdflatex
 \documentclass[bigger]{beamer}
 \usepackage[utf8]{inputenc}
@@ -48,153 +48,165 @@
 \setbeamercovered{transparent}
 
 \section{Pubs}
-\label{sec:org4b2603b}
-\begin{frame}[label={sec:orgf89d63b}]{Team player}
+\label{sec:org2fa59ec}
+\begin{frame}[label={sec:org3be2205}]{Team player}
 \begin{columns}
 \begin{column}{0.5\columnwidth}
+\begin{scriptsize}
 \begin{itemize}
-\item Susan Achury
-\item Leonardo Antenangeli
-\item Natalia Aruguete
-\item Ernesto Calvo
-\item Scott Clifford
-\item Scott Desposato (x2)
-\item Cengiz Erisen
-\item Jorge Fernandes
-\item Omar García Ponce
-\item Agustina Haime
-\item Victor Hernández Huerta
-\item Verónica Hoyo (x2)
-\item Paul Johnson
-\item Sandra Ley (x2)
+  \item Susan Achury
+  \item Leonardo Antenangeli
+  \item Natalia Aruguete
+  \item Ernesto Calvo
+  \item Scott Clifford
+  \item Scott Desposato (x2)
+  \item Cengiz Erisen
+  \item Jorge Fernandes
+  \item Omar García Ponce
+  \item Agustina Haime
+  \item Victor Hernández Huerta
+  \item Verónica Hoyo (x2)
+  \item Paul Johnson
+  \item Sandra Ley (x2)
 \end{itemize}
+\end{footnotesize}
 \end{column}
 \begin{column}{0.5\columnwidth}
+\begin{scriptsize}
 \begin{itemize}
-\item Eric Magar
-\item Marco Morales
-\item Javier Márquez
-\item Margarita Ramírez
-\item Pedro Riera (x3)
-\item Sebastián Saiegh
-\item Carlos Scartascini
-\item Leslie Schwindt-Bayer
-\item Robert Stein et al. (x2)
-\item Michelle Torres
-\item Agustín Vallejo
-\item Tiago Ventura
-\item Dane Wendell
+  \item Eric Magar
+  \item Marco Morales
+  \item Javier Márquez
+  \item Margarita Ramírez
+  \item Pedro Riera (x3) 
+  \item Sebastián Saiegh
+  \item Carlos Scartascini
+  \item Leslie Schwindt-Bayer
+  \item Robert Stein et al. (x2)
+  \item Michelle Torres
+  \item Agustín Vallejo
+  \item Tiago Ventura
+  \item Dane Wendell
+  \item ...
 \end{itemize}
+\end{footnotesize}
 \end{column}
 \end{columns}
 \end{frame}
-\begin{frame}[label={sec:orgfc0634f}]{Tres vetas}
-\begin{block}{Fraude, integridad electoral}
+\begin{frame}[label={sec:org5e1ff4a}]{Three strands}
+\begin{block}{Fraud, election integrity}
 \includegraphics[width=\textwidth]{./pics/pubs1.png}
 \end{block}
-\begin{block}{Votos, compra-venta}
+\begin{block}{Voting, vote trading}
 \includegraphics[width=\textwidth]{./pics/pubs2.png}
 \end{block}
-\begin{block}{Estudios legislativos}
+\begin{block}{Legislative studies, roll call votes}
 \includegraphics[width=\textwidth]{./pics/pubs3.png}
 \end{block}
 \end{frame}
-\begin{frame}[label={sec:org5ce83c4}]{Tres vetas}
-\begin{block}{Fraude, integridad electoral}
-\includegraphics[width=\textwidth]{./pics/pubs1s.png}
+\begin{frame}[label={sec:orga8b8a1f}]{Three strands}
+\begin{block}{Fraud, election integrity}
+\transparent{0.3}\includegraphics[width=\textwidth]{./pics/pubs1.png}
 \end{block}
-\begin{block}{Votos, compra-venta}
+\begin{block}{Voting, vote trading}
 \transparent{0.3}\includegraphics[width=\textwidth]{./pics/pubs2.png}
 \end{block}
-\begin{block}{Estudios legislativos}
-\transparent{0.3}\includegraphics[width=\textwidth]{./pics/pubs3.png}
+\begin{block}{Legislative studies, roll call votes}
+\includegraphics[width=\textwidth]{./pics/pubs3.png}
 \end{block}
 \end{frame}
-
-\section{Mi presentación}
-\label{sec:org61ab052}
-\begin{frame}[label={sec:org4449191}]{}
-\includegraphics[width=\textwidth]{./pics/csg-bartlett.png}
-\end{frame}
-\begin{frame}[label={sec:org797d352}]{Aire fresco para una controversia añeja}
+\section{Senate roll call votes}
+\label{sec:org3619f01}
+\begin{frame}[label={sec:org115604a}]{@ back burner since 2014}
 \begin{itemize}
-\item CFE reportó cómputos agregados de consejos distritales $$V = \sum_{d=1}^{300} v_d = 9.6M~~(50.3\%)$$
+\item Francisco sought to remedy asymmetric approach to Mexican Congress
+\item But: Senate doesn't publish pre-digested roll call votes
+\item Sent me a collection scraped from Senate web page \pause
 \end{itemize}
-\pause
+\begin{block}{Labor intensive}
 \begin{itemize}
-\item 30 años sin evidencia sistemática \newline destrucción paquetes impide verificar si $$\sum_{casillas} v_c \stackrel{\text{?}}{=} V$$
+\item Messy web concièrges
+\item Agreed we'd deal with this later
 \end{itemize}
+\end{block}
 \end{frame}
-\begin{frame}[label={sec:org87db8ed}]{Aire fresco para una controversia añeja}
-\begin{block}{El argumento de Salinas}
+\begin{frame}[label={sec:orgae5f13c}]{Problems}
+\begin{itemize}
+\item In period covered, roll call vote appear in 3 dift ways
+\item Member names often scrambled
+\item Many repeats  \pause
+\end{itemize}
+\begin{block}{What I've done}
 \begin{enumerate}
-\item la suma de votos en actas le dan la victoria
-\item 100\% de las actas disponibles en Lecumberri
+\item \emph{Beautiful soup} to de-HTMLize
+\item Full senator names, with substitutes
+\item Then regular expressions in search of patterns
+\item Trial-and-error
 \end{enumerate}
-\bigskip \pause
-\end{block}
-\begin{block}{Data original}
-\begin{itemize}
-\item Fotos digitales de las actas de escrutinio (\(N \approx 53k\))
-\item Análisis de (2) confirma que (1) es cierta \newline
-\(\rightarrow\) descarta manipulación centralizada
-\item Pero también evidencia un \alert{fraude de gran escala} y cómo se instrumentó
-\item \emph{Convolutional neural networks}
-\end{itemize}
 \end{block}
 \end{frame}
-
-\begin{frame}[label={sec:org3fd5708}]{El procedimiento CNN}
-\begin{columns}
-\begin{column}{0.55\columnwidth}
-Analogía: el nervio óptico \newline estímulo de cada región visual dispara una neurona específica (un pixel)
-
-\bigskip Entrenamiento para reconocer
-\begin{enumerate}
-\item número fidedigno \includegraphics[width=.1\textwidth]{./pics/dos.png} \\
-\item alterados con malicia (rayaduras, superposición\ldots{})
-\item tachones bienintencionados
-\end{enumerate}
-
-\bigskip Sigue \emph{machine learning}
-\end{column}
-\begin{column}{0.45\columnwidth}
-\includegraphics[width=\columnwidth]{./pics/fig1-apsr.png}
-\end{column}
-\end{columns}
-\end{frame}
-\begin{frame}[label={sec:org39e51f3}]{Operaron los gobernadores}
-\includegraphics[width=\textwidth]{./pics/mapa-apsr.png} \\
-\centering Tasa de error: falso positivo \(\approx 0.07~~~\) falso negativo \(\approx 0.15\)
-\end{frame}
-\begin{frame}[label={sec:orgac55f49}]{Casillas zapato}
-\begin{columns}
-\begin{column}{0.5\columnwidth}
-\includegraphics[width=\columnwidth]{./pics/fig4-apsr.png} \\
-\end{column}
-\begin{column}{0.5\columnwidth}
-\includegraphics[width=\columnwidth]{./pics/fig5-apsr.png} \\
-\end{column}
-\end{columns}
-\end{frame}
-\begin{frame}[label={sec:orgae7a289}]{Correlates}
-\begin{tikzpicture}
-\node (0,0){\includegraphics[width=\textwidth]{./pics/reg-apsr.png}};
-\fill[draw,fill=none,red,thick] (-1.1,2.6) -- (-0.1,2.6) -- (-0.1,1.1) -- (-1.1,1.1) -- (-1.1,2.6);
-\end{tikzpicture}
-\end{frame}
-\begin{frame}[label={sec:orgaee2438}]{Balance: el estudio sistemático del fraude}
-Análisis sistemático confirma
-
+\begin{frame}[label={sec:org8cf5652}]{What there is}
 \begin{itemize}
-\item \emph{Caída del sistema} no instrumentó un fraude centralizado desde Bucareli
-\item sí permitió alterar \(\sim30\%\) actas previo al cómputo distrital, inflando voto Salinas
-\item Operación de fuerza bruta por gobernadores "talentosos"
-\item ¿CSG se robó la elección o sólo amplió el margen?
-\item Obsesión con el \alert{fraude} \newline
-1997--2024 quizás matiza
+\item Francisco sent 637 digital issues of \emph{Diario de sesiones}
+\item Each includes debate and 1+ roll call vote   \pause
+\item Produced 724 votes
 \end{itemize}
-
-\pause \bigskip \centering \alert{¡Gracias Francisco!}
+\begin{center}
+\begin{tabular}{lr}
+Session & N\\
+\hline
+Spr.'05 & 101\\
+Fall'05 & 118\\
+Spr.'06 & 154\\
+Fall'06 & 47\\
+Spr.'07 & 104\\
+Fall'07 & 17\\
+Fall'10 & 73\\
+Spr.'11 & 110\\
+\end{tabular}
+\end{center}
+\end{frame}
+\begin{frame}[label={sec:org78a817c}]{Against bill universe}
+\begin{center}
+\begin{tabular}{lrr}
+Session & Cantú & Weldon\\
+\hline
+\alert{59th Leg.} &  & \\
+Fall'03 &  & 109\\
+Spr.'04 &  & 64\\
+Fall'04 &  & 98\\
+Spr.'05 & 101 & 108\\
+Fall'05 & 118 & 130\\
+Spr.'06 & 154 & 157\\
+\hline
+\alert{60th Leg.} &  & \\
+Fall'06 & 47 & 63\\
+Spr.'07 & 104 & 108\\
+Fall'07 & 17 & 177\\
+Spr.'08 &  & 109\\
+Fall'08 &  & 132\\
+Spr.'09 &  & 129\\
+\end{tabular}
+\end{center}
+\end{frame}
+\begin{frame}[label={sec:orga47a76d}]{Rice cohesion scores}
+\begin{center}
+\begin{tabular}{lrr}
+Party & 2005--06 & 2006--11\\
+PAN & .96 & .98\\
+PRI & .98 & .99\\
+PRD & .96 & .92\\
+\end{tabular}
+\end{center}
+\end{frame}
+\begin{frame}[label={sec:org46b75cf}]{Rice dissimilarity}
+\begin{center}
+\begin{tabular}{lrr}
+ & 2005--06 & 2006--11\\
+PAN-PRI & .07 & .06\\
+PAN-PRD & .10 & .21\\
+PRI-PRD & .07 & .18\\
+\end{tabular}
+\end{center}
 \end{frame}
 \end{document}
