@@ -267,7 +267,19 @@ $C_{pv} = \frac{\left|\text{ayes}_{pv} - \text{nays}_{pv}\right|}{\text{ayes}_{p
 |-------+-----------+----------|
 | PAN   |       .96 |      .98 |
 | PRI   |       .98 |      .99 |
-| Left   |       .96 |      .92 |
+| Left  |       .96 |      .92 |
+** Rice dissimilarity
+\centering
+$D_{pqv} = \left|\frac{\text{nays}_{pv}}{\text{ayes}_{pv} + \text{nays}_{pv}} - \frac{\text{nays}_{qv}}{\text{ayes}_{qv} + \text{nays}_{qv}}\right|$
+# $D_{pqv} = |\%\text{nays}_{pv} - \%\text{nays}_{qv}|$
+\bigskip
+|    <c>    |       <r> |      <r> |
+|           | $\bar{D}$ |          |
+|           |  2005--06 | 2006--11 |
+|-----------+-----------+----------|
+| PAN--PRI  |       .07 |      .06 |
+| PAN--Left |       .10 |      .21 |
+| PRI--Left |       .07 |      .18 |
 ** Rice dissimilarity
 \centering
 $D_{pqv} = \left|\frac{\text{nays}_{pv}}{\text{ayes}_{pv} + \text{nays}_{pv}} - \frac{\text{nays}_{qv}}{\text{ayes}_{qv} + \text{nays}_{qv}}\right|$
@@ -280,7 +292,6 @@ $D_{pqv} = \left|\frac{\text{nays}_{pv}}{\text{ayes}_{pv} + \text{nays}_{pv}} - 
 | PAN--PRI  |       .07 |    *.06* |
 | PAN--Left |       .10 |    *.21* |
 | PRI--Left |       .07 |    *.18* |
-|           |           |          |
 * Public repository
 ** Public repository 
 ***                                                         :B_ignoreheading:
