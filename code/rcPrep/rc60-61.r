@@ -115,13 +115,18 @@ votdat <- votdat[, moveme(names(votdat), "leg first; tit last")]  # move columns
 tmp <- paste(votdat$vid, votdat$file, sep = "-")
 tmp <- sub(".html", "", tmp) ## drop .htlm trailer
 votdat$vid <- tmp
+## put new vid in rc for export
+rc$vid <- tmp
+rc <- rc[, moveme(names(rc), "vid first")]  # move columns
 
 save.image(file = paste(workdir, "data/votes-for-web", "rc60-61.RData", sep="/") )
 # csv versions
 write.csv(sendat, file = paste(workdir, "data/votes-for-web", "sendat60-61.csv", sep="/"), row.names = FALSE)
 write.csv(votdat, file = paste(workdir, "data/votes-for-web", "votdat60-61.csv", sep="/"), row.names = FALSE)
-write.csv(rc,     file = paste(workdir, "data/votes-for-web", "rc60-61.csv",     sep="/"), row.names = TRUE)
+write.csv(rc,     file = paste(workdir, "data/votes-for-web", "rc60-61.csv",     sep="/"), row.names = FALSE)
 
 # if only loading saved data
-load(file=paste(workdir, "data/votesForWeb", "rc60-61.RData", sep="/"))
+workdir <- c("~/Dropbox/data/rollcall/senMex")
+setwd(workdir)
+load(file=paste(workdir, "data/votes-for-web", "rc60-61.RData", sep="/"))
 
