@@ -106,9 +106,34 @@ no2 <- apply(tmp, 1, function(x) sum(x==-1, na.rm = TRUE))
 sel3 <- which(yes2+no2>0)
 rice.dis.pan.prd.60.61 <- mean(abs(yes1[sel3]/(yes1[sel3]+no1[sel3]) - yes2[sel3]/(yes2[sel3]+no2[sel3])))
 
+sel1 <- which(sendat58.59$part=="pri")
+sel2 <- which(sendat58.59$part=="prd")
+tmp <- rc58.59[,sel1]
+yes1 <- apply(tmp, 1, function(x) sum(x==1, na.rm = TRUE))
+no1 <- apply(tmp, 1, function(x) sum(x==-1, na.rm = TRUE))
+tmp <- rc58.59[,sel2]
+yes2 <- apply(tmp, 1, function(x) sum(x==1, na.rm = TRUE))
+no2 <- apply(tmp, 1, function(x) sum(x==-1, na.rm = TRUE))
+rice.dis.pri.prd.58.59 <- mean(abs(yes1/(yes1+no1) - yes2/(yes2+no2)))
 
-sel1 <- which(sendat60.61$part=="pan")
-sel2 <- which(sendat60.61$part=="pri")
+sel1 <- which(sendat60.61$part=="pri")
+sel2 <- which(sendat60.61$part=="prd")
+tmp <- rc60.61[,sel1]
+yes1 <- apply(tmp, 1, function(x) sum(x==1, na.rm = TRUE))
+no1 <- apply(tmp, 1, function(x) sum(x==-1, na.rm = TRUE))
+tmp <- rc60.61[,sel2]
+yes2 <- apply(tmp, 1, function(x) sum(x==1, na.rm = TRUE))
+no2 <- apply(tmp, 1, function(x) sum(x==-1, na.rm = TRUE))
+sel3 <- which(yes2+no2>0)
+rice.dis.pri.prd.60.61 <- mean(abs(yes1[sel3]/(yes1[sel3]+no1[sel3]) - yes2[sel3]/(yes2[sel3]+no2[sel3])))
+
+round(rice.dis.pan.pri.58.59, 2)
+round(rice.dis.pan.pri.60.61, 2)
+round(rice.dis.pan.prd.58.59, 2)
+round(rice.dis.pan.prd.60.61, 2)
+round(rice.dis.pri.prd.58.59, 2)
+round(rice.dis.pri.prd.60.61, 2)
+
 
 
 
