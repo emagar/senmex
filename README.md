@@ -1,12 +1,12 @@
-- [Description of *Roll call votes in the Mexican Senate data* repository](#org03d5216)
-- [Francisco Cantú](#org4209391)
-- [Contents](#orgcf97cc4)
-- [License](#org29fad48)
-- [Citation in BibTex format](#orge478114)
-- [Files included](#orgaaa6ed0)
-- [Data](#org1f6425d)
-- [Codebook](#orgf531872)
-- [Acknowledgements](#orga7d831b)
+- [Description of *Roll call votes in the Mexican Senate data* repository](#orgfd12bfe)
+- [Francisco Cantú](#orgf16c717)
+- [Contents](#orgc273dfa)
+- [License](#org134bcaa)
+- [Citation in BibTex format](#org047edb1)
+- [Files included](#org2b433ab)
+- [Data](#orgcd83876)
+- [Codebook](#org6f7150c)
+- [Acknowledgements](#orge31af27)
 
 Last revision: 2025-03-28 Report inconsistencies to emagar at gmail dot com.
 
@@ -19,7 +19,7 @@ Last revision: 2025-03-28 Report inconsistencies to emagar at gmail dot com.
 ---
 
 
-<a id="org03d5216"></a>
+<a id="orgfd12bfe"></a>
 
 # Description of *Roll call votes in the Mexican Senate data* repository
 
@@ -30,30 +30,30 @@ Last revision: 2025-03-28 Report inconsistencies to emagar at gmail dot com.
 The repository contains roll call data for recent Senates of the Mexican Congress. It also includes data on the senators present in each Legislature. Data has been compiled primarily from the Senate's web page at <https://senado.gob.mx/>, with information from other sources and the press.
 
 
-<a id="org4209391"></a>
+<a id="orgf16c717"></a>
 
 # Francisco Cantú
 
-![img](./cantu-pics/AIB_5906.jpg)
+![img](./AIB_5906.jpg)
 
 The repository honors the memory of my colleague and friend Francisco Cantú, who passed away on August 17, 2023. Francisco was a [leading scholar](https://www.cambridge.org/core/journals/political-science-today/article/in-memoriam-francisco-cantu/7E57FEBCB15FDFEC437654A4C95F48DE) and esteemed co-author whose prolific career was, sadly, much too short. In 2014, while preparing our analysis of [roll call votes for the Mexican Chamber of Deputies](https://github.com/emagar/dipmex), Francisco aimed at remedying the absence of research on Senate politics. The Senate has not systematically reported roll call votes in its web page. (It has since began reporting this information, but the data remains incomplete, and does not go back beyond 2007.) In absence of data of individual senator behavior, the upper chamber of Congress remained in relative obscurity. He circulated a collection of digital issues of the *Diario de los Debates*, each containing, within the transcripts of the debates and the session's floor proceedings, one or more roll call votes. We anticipated the systematization of this information to be quite challenging, and the project remained pending. This repository performs the data systematization.
 
 
-<a id="orgcf97cc4"></a>
+<a id="orgc273dfa"></a>
 
 # Contents
 
 The repository contains code, raw data, and clean roll call databases. Code included replicates data downloading from the primary source (`code/getweb/`); databases preparation from raw data (`code/rcPrep`); and descriptive analysis and ideal point estimation (`code/rcAnalysis/`). Raw data is in `data/fromWeb/` directory. ****If interested in clean roll call votes only, simply copy the contents of the `data/votes-for-web/` subdirectory****. Data includes roll call votes of the 59th (1sep2003-31aug2006) and 60th (1sep2006-31aug2009) Legislatures. Data is distributed in R (<http://cran.r-project.org/>) and csv formats.
 
 
-<a id="org29fad48"></a>
+<a id="org134bcaa"></a>
 
 # License
 
 This repository in under the MIT License, see <http://opensource.org/licenses/MIT>. The sole condition to use the data is to cite it as follows: Francisco Cantu, Scott Desposato, and Eric Magar. 2014. "Consideraciones metodologicas para estudiantes de politica legislativa mexicana: sesgo por seleccion en votaciones nominales". Politica y Gobierno vol. 21, num. 1, pp. 25-54.
 
 
-<a id="orge478114"></a>
+<a id="org047edb1"></a>
 
 # Citation in BibTex format
 
@@ -71,7 +71,7 @@ This repository in under the MIT License, see <http://opensource.org/licenses/MI
 ```
 
 
-<a id="orgaaa6ed0"></a>
+<a id="org2b433ab"></a>
 
 # Files included
 
@@ -92,14 +92,14 @@ This repository in under the MIT License, see <http://opensource.org/licenses/MI
 -   (Under construction)
 
 
-<a id="org1f6425d"></a>
+<a id="orgcd83876"></a>
 
 # Data
 
 The objects in each R file (zipped together in text-only files) are the following: -`sendat` has individual senator information (names, gender, state and district, party, dcarta=dummy equal 1 for members filing a letter of intent with the chamber's Junta to run for office again (inapplicable before 2018 see [this](http://eleccionconsecutiva.diputados.gob.mx/contendientes)), dreran=dummy equal 1 for members renominated, dreelected=dummy equal 1 for members who reelected. -`votdat`: has vote information (favor=ayes, contra=nays, absten=abstained, quorum=present but not voting, ausen=no show, title=motion considered, leg=legislature, yr-mo-dy=vote's date). -`rc`: roll call vote information (0=was not chamber member, 1=aye, 2=nay, 3=abstained, 4=present but did not vote, 5=no show).
 
 
-<a id="orgf531872"></a>
+<a id="org6f7150c"></a>
 
 # Codebook
 
@@ -131,7 +131,7 @@ Variables usually appear as columns in a data frame. A list of variables include
 -   `nom` = member's name.
 
 
-<a id="orga7d831b"></a>
+<a id="orge31af27"></a>
 
 # Acknowledgements
 
