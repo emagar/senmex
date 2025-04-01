@@ -1,6 +1,6 @@
-#+TITLE: Roll call votes in the Mexican Senate data
+#+TITLE: Roll Call Votes in the Mexican Senate
 #+AUTHOR: Francisco Cantú and Eric Magar
-Last revision: 2025-03-28
+Last revision: 2025-03-31
 Report inconsistencies to emagar at gmail dot com.
 
 ----------
@@ -15,7 +15,7 @@ Recent news
 
 # Export to md: M-x org-md-export-to-markdown
 
-* Description of /Roll call votes in the Mexican Senate data/ repository
+* Description of /Roll Call Votes in the Mexican Senate/ data repository
 - Authors: Francisco Cantú and Eric Magar
 - Email: emagar at gmail dot com
 - GitHub: https://github.com/emagar/senmex
